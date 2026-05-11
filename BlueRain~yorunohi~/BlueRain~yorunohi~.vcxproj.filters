@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\Game">
+      <UniqueIdentifier>{7b695ef7-f82f-4bff-b819-1e9495f5c607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Scene">
+      <UniqueIdentifier>{779daf0e-7ed0-42da-9c48-80ca2dcf1583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Scene\Title">
+      <UniqueIdentifier>{d01ff7f5-7112-4d15-b209-c879c8514bb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Scene\Result">
+      <UniqueIdentifier>{24b5076f-04b0-488c-962f-0a44c52f0e4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Scene\Play">
+      <UniqueIdentifier>{bd056d22-86f0-4adc-ad64-0be23551895a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Scene\SceneManager">
+      <UniqueIdentifier>{28eda4f6-9e0b-420e-9bf1-8619784c04b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Lib">
+      <UniqueIdentifier>{3900b78e-e62a-4dd4-8087-15be7fc7961a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Lib\Fade">
+      <UniqueIdentifier>{5a0846c1-87cd-4296-a46e-d2ee13a21657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Lib\Input">
+      <UniqueIdentifier>{0516f5fb-89ee-406d-bb37-80aee5d65867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Scene\GameOver">
+      <UniqueIdentifier>{59488b76-f7d7-4137-b1d4-371fd8ba32dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Player">
+      <UniqueIdentifier>{e18f0b89-663f-4e6c-a802-c2e096f85993}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Shot">
+      <UniqueIdentifier>{4e1566a7-a83b-4275-ba34-5f70c506f02d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Enemy">
+      <UniqueIdentifier>{0e53f55f-05aa-4c19-af01-86ff1314745e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Object">
+      <UniqueIdentifier>{10e6975e-437e-437c-b04e-b5da0b416b1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Lib\Common.h">
+      <Filter>ソース ファイル\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Scene\Result\Result.h">
+      <Filter>ソース ファイル\Game\Scene\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Scene\Title\Title.h">
+      <Filter>ソース ファイル\Game\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Scene\Play\Play.h">
+      <Filter>ソース ファイル\Game\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Scene\SceneManager\SceneManager.h">
+      <Filter>ソース ファイル\Game\Scene\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lib\Fade\Fade.h">
+      <Filter>ソース ファイル\Lib\Fade</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lib\Input\Input.h">
+      <Filter>ソース ファイル\Lib\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Scene\GameOver\GameOver.h">
+      <Filter>ソース ファイル\Game\Scene\GameOver</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\player\Player.h">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Shot\PLShot.h">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Shot\ShotManager.h">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Enemy\Enemy1.h">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Object\Object.h">
+      <Filter>ソース ファイル\Game\Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Game\Scene\Result\Result.cpp">
+      <Filter>ソース ファイル\Game\Scene\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Scene\Title\Title.cpp">
+      <Filter>ソース ファイル\Game\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Scene\Play\Play.cpp">
+      <Filter>ソース ファイル\Game\Scene\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Scene\SceneManager\SceneManager.cpp">
+      <Filter>ソース ファイル\Game\Scene\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\main.cpp">
+      <Filter>ソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lib\Fade\Fade.cpp">
+      <Filter>ソース ファイル\Lib\Fade</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lib\Input\Input.cpp">
+      <Filter>ソース ファイル\Lib\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Scene\GameOver\GameOver.cpp">
+      <Filter>ソース ファイル\Game\Scene\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\player\Player.cpp">
+      <Filter>ソース ファイル\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Shot\PLShot.cpp">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Shot\ShotManager.cpp">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\Enemy1.cpp">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Object\Object.cpp">
+      <Filter>ソース ファイル\Game\Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
