@@ -98,6 +98,7 @@ void Play::Draw()
 {
 	if (m_SceneID != PLAY_SCENE_LOOP)return;
 
+	m_BackGround.Draw();
 	m_Player.Draw();
 	m_ShotManager.Draw();
 	m_Enemy1.Draw();
@@ -107,6 +108,7 @@ void Play::Draw()
 //初期化
 void Play::Init()
 {
+	m_BackGround.Init();
 	m_Player.Init();
 	m_ShotManager.Init();
 	m_Enemy1.Init();
@@ -115,21 +117,22 @@ void Play::Init()
 //終了処理
 void Play::Exit()
 {
-	
+	m_BackGround.Exit();
 }
 
 //ロード
 void Play::Load()
 {
-	
+	m_BackGround.Load();
 }
 
 //毎フレーム呼ぶ処理
 void Play::Step()
 {
+	m_BackGround.Step();
 	m_Player.Step(m_ShotManager);
 	m_ShotManager.Step();
-	m_Enemy1.Step();
+	m_Enemy1.Step(m_ShotManager);
 }
 
 bool Play::Flg()

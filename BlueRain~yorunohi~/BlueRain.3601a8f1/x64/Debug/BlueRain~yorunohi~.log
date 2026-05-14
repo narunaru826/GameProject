@@ -1,7 +1,4 @@
-﻿  Enemy1.cpp
-C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Enemy1.cpp(86,28): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Enemy1.cpp(87,28): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Enemy1.cpp(88,16): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Enemy1.cpp(88,13): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Enemy1.cpp(127,7): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+﻿  EnemyShot.cpp
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\EnemyShot.cpp(65,28): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\EnemyShot.cpp(65,19): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   BlueRain~yorunohi~.vcxproj -> C:\Users\2409402\Desktop\BlueRain~yorunohi~\x64\Debug\BlueRain~yorunohi~.exe

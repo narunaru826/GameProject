@@ -1,16 +1,17 @@
 #pragma once
 #include"PLShot.h"
+#include"EnemyShot.h"
 
 #define PL_SHOT_NUM (1000)
-#define TURRET_SHOT_NUM (1000)
-#define ENE_SHOTGUID_NUM (300)
+
+#define ENE_SHOT_NUM (1000)
 
 class ShotManager
 {
 private:
 	//プレイヤーのショット
-	ShotPL PlayerShot[PL_SHOT_NUM];
-	
+	ShotPL m_PlayerShot[PL_SHOT_NUM];
+	ShotEnemy m_EnemyShot[ENE_SHOT_NUM];
 
 
 	float m_Rot;
@@ -36,14 +37,20 @@ public:
 	//プレイヤーのショットリクエスト
 	void RequestPlayerShot(const VECTOR& Pos, const float& Speed);
 
-
+	//プレイヤーのショットリクエスト
+	void RequestEnemyShot(const VECTOR& Pos, const VECTOR& Speed, const int& count);
+	
 	
 	//プレイヤーのショットの情報取得
 	ShotPL& GetPlayerShot(int ID)
 	{
-		return PlayerShot[ID];
+		return m_PlayerShot[ID];
 	}
 
-	
+	//プレイヤーのショットの情報取得
+	ShotEnemy& GetEnemyShot(int ID)
+	{
+		return m_EnemyShot[ID];
+	}
 
 };

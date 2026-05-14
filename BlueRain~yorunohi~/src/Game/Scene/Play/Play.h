@@ -3,6 +3,7 @@
 #include"../../../Game/player/Player.h"
 #include"../../../Game/Shot/ShotManager.h"
 #include"../../Enemy/Enemy1.h"
+#include"../../BackGround/BackGround.h"
 class Play
 {
 private:
@@ -20,6 +21,7 @@ private:
 	Player m_Player;
 	ShotManager m_ShotManager;
 	Enemy1 m_Enemy1;
+	BackGround m_BackGround;
 	tagPLAY_SCENE m_SceneID;	//シーン保存
 public:
 	//コンストラクタ・デストラクタ

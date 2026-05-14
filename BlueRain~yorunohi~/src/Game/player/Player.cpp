@@ -37,7 +37,7 @@ Player::~Player()
 //‰Šú‰»
 void Player::Init()
 {
-	Init(VGet(800.0f, 700.0f, 0.0f), VGet(0.0f, 0.0f, 0.0f));
+	Init(VGet(525.0f, 700.0f, 0.0f), VGet(0.0f, 0.0f, 0.0f));
 	
 	//‚Ð‚Æ‚Ü‚¸‰Šú‰»
 	
@@ -98,9 +98,9 @@ void Player::Step(ShotManager& shotmanager)
 	{
 		m_Pos.x = 0;
 	}
-	if (m_Pos.x > 1600)
+	if (m_Pos.x > 1030)
 	{
-		m_Pos.x = 1600;
+		m_Pos.x = 1030;
 	}
 	if (m_Pos.y < 0)
 	{
@@ -135,6 +135,8 @@ void Player::Update()
 void Player::Draw()
 {
 	DrawCircle(m_Pos.x, m_Pos.y, 16, GetColor(255, 255, 0));
+	DrawFormatString(20, 20, GetColor(255, 0, 0), "PL‚ÌXÀ•W:%.2f", m_Pos.x);
+	DrawFormatString(20, 40, GetColor(255, 0, 0), "PL‚ÌYÀ•W:%.2f", m_Pos.y);
 }
 
 void Player::Exit()

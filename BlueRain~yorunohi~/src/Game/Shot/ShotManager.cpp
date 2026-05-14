@@ -25,10 +25,14 @@ void ShotManager::Init()
 {
 	for (int i = 0; i < PL_SHOT_NUM; i++)
 	{
-		PlayerShot[i].Init();
+		m_PlayerShot[i].Init();
 
 	}
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		m_EnemyShot[i].Init();
 
+	}
 	
 	m_hndl = -1;
 	
@@ -77,10 +81,15 @@ void ShotManager::Step()
 	for (int i = 0; i < PL_SHOT_NUM; i++)
 	{
 
-		PlayerShot[i].Step();
+		m_PlayerShot[i].Step();
 
 	}
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
 
+		m_EnemyShot[i].Step();
+
+	}
 	m_Rot += 0.01;
 	
 }
@@ -91,11 +100,16 @@ void ShotManager::Draw()
 	for (int i = 0; i < PL_SHOT_NUM; i++)
 	{
 
-		PlayerShot[i].Draw();
+		m_PlayerShot[i].Draw();
 
 	}
 
-	
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+
+		m_EnemyShot[i].Draw();
+
+	}
 }
 
 
@@ -108,12 +122,30 @@ void ShotManager::RequestPlayerShot(const VECTOR& Pos, const float& Speed)
 	for (int i = 0; i < PL_SHOT_NUM; i++)
 	{
 
-		if (PlayerShot[i].RequestShot(Pos, Speed))
+		if (m_PlayerShot[i].RequestShot(Pos, Speed))
 		{
 
 			break;
 		}
 	}
 
+}
+
+//プレイヤーのショットリクエスト
+void ShotManager::RequestEnemyShot(const VECTOR& Pos, const VECTOR& Speed ,const int& count)
+{
+	VECTOR Spd = Speed;
+
+	
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		
+		if (m_EnemyShot[i].RequestShot(Pos, Spd))
+		{
+			
+			break;
+		}
+	}
+	
 }
 

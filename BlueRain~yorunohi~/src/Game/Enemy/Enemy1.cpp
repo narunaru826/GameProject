@@ -1,8 +1,8 @@
 #include"Enemy1.h"
 #include<math.h>
 #include"../../Lib/Common.h"
-
-
+#include"../../Lib/MyMath/MyMath.h"
+#include<cmath>
 
 //#define MY_DEBUG 
 
@@ -10,7 +10,7 @@ static const int ROOT_ID[] = { 1,2,3,4,5 };
 static const int ROOT_NUM = 5;
 
 
-
+#define SHOTWAIT (0)
 //コンストラクタ
 Enemy1::Enemy1()
 {
@@ -29,7 +29,13 @@ Enemy1::Enemy1()
 	m_enemyKillcount = 0;
 
 	m_count = 0;
-	m_Rand = GetRand(2);
+	m_shotwait = 0;
+
+	m_count = 0;
+	m_speed = VGet(0.0f,0.0f,0.0f);
+
+	m_waitflg = false;
+	m_waitTimer = 10;
 }
 
 //デストラクタ
@@ -44,7 +50,7 @@ void Enemy1::Init()
 	//memset(&m_Pos, 0, sizeof(m_Pos));
 	memset(&m_Speed, 0, sizeof(m_Speed));
 
-	m_isActive = false;
+	m_isActive = true;
 	m_hndl = -1;
 	m_Radius = RADIUS;
 	m_EnemyLife = ENEMYLIFE;
@@ -60,6 +66,15 @@ void Enemy1::Init()
 	
 	x = -6.0f;
 	y = 0.0f;
+
+	m_shotwait = 0;
+
+	m_count = 0;
+
+	m_speed = VGet(0.0f, 0.0f, 0.0f);
+
+	m_waitflg = false;
+	m_waitTimer = 10;
 }
 
 //ロード
@@ -83,9 +98,9 @@ void Enemy1::Draw()
 	//{
 	//	return;
 	//}
-	m_Pos.x = WINDOW_SENTER_X + (int)(x * 50);
-	m_Pos.y = WINDOW_SENTER_Y - (int)(y * 30);
-	DrawCircle(x, y, 30, GetColor(0, 0, 255));
+	if (m_isActive) {
+		DrawCircle(m_Pos.x, m_Pos.y, 30, GetColor(0, 0, 255));
+	}
 #ifdef MY_DEBUG
 	VECTOR Pos = m_Pos;
 	//Pos.y = m_Radius;
@@ -112,17 +127,41 @@ bool Enemy1::Request(const VECTOR& pos, const VECTOR& speed)
 
 
 //毎フレーム
-void Enemy1::Step()
+void Enemy1::Step(ShotManager &shotmanager)
 {
 	//生存フラグオフの場合は終了
-	/*if (!m_isActive)
+	if (!m_isActive)
 	{
 		return;
-	}*/
+	}
 	/*m_Pos.x += 1;
 	m_Pos.y = 5 * cosf(m_Pos.x) - cosf(5 * m_Pos.x);*/
+	y = WaveMove(x);
+	//y = x / 10 * ceil(x * x * tanf(x * x));
+	//y = Gcd(x, 16);
+	x += 0.25;
+	/*if (x > 29.0f)
+	{
+		x = -6.0f;
+	}*/
+	m_Pos.x = WINDOW_SENTER_X - 600 + (int)(x * 50);
+	m_Pos.y = WINDOW_SENTER_Y - 300 - (int)(y * 20);
+	m_shotwait--;
+	if (m_shotwait < 0) {
+		m_count++;
+		shotmanager.RequestEnemyShot(m_Pos, m_speed,m_count);
+		m_shotwait = SHOTWAIT;
+		
+	}
 	
-	y = (25 * cosf(x) - cosf(25 * x) + 300);
 	
-	x += 0.03;
+	//m_Pos.y += 1;
+
+	//移動制限
+	if (m_Pos.x < -87 || m_Pos.x > 1030 ||
+		m_Pos.y < 0 || m_Pos.y > 900)
+	{
+		m_isActive = false;
+	}
+	
 }

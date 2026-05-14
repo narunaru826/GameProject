@@ -55,6 +55,12 @@
     <Filter Include="ソース ファイル\Game\Object">
       <UniqueIdentifier>{10e6975e-437e-437c-b04e-b5da0b416b1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Lib\MyMath">
+      <UniqueIdentifier>{ff038419-3463-4f4e-8860-86f95fbb99d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\BackGround">
+      <UniqueIdentifier>{640356d1-c62f-4d8e-aa4c-948a4e3ab95d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Lib\Common.h">
@@ -96,6 +102,15 @@
     <ClInclude Include="src\Game\Object\Object.h">
       <Filter>ソース ファイル\Game\Object</Filter>
     </ClInclude>
+    <ClInclude Include="src\Lib\MyMath\MyMath.h">
+      <Filter>ソース ファイル\Lib\MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\BackGround\BackGround.h">
+      <Filter>ソース ファイル\Game\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Shot\EnemyShot.h">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game\Scene\Result\Result.cpp">
@@ -136,6 +151,15 @@
     </ClCompile>
     <ClCompile Include="src\Game\Object\Object.cpp">
       <Filter>ソース ファイル\Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lib\MyMath\MyMath.cpp">
+      <Filter>ソース ファイル\Lib\MyMath</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\BackGround\BackGround.cpp">
+      <Filter>ソース ファイル\Game\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Shot\EnemyShot.cpp">
+      <Filter>ソース ファイル\Game\Shot</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

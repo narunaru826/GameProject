@@ -3,68 +3,92 @@
   "WorkspaceRootPath": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\EnemyShot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\EnemyShot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\EnemyShot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\EnemyShot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Enemy\\Enemy1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\Play\\Play.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Lib\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Enemy\\Enemy1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\Play\\Play.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Object\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\player\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Object\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\SceneManager\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\ShotManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\player\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\PLShot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\ShotManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\ShotManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Enemy\\Enemy1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\player\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\Play\\Play.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\player\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\Play\\Play.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\SceneManager\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\BackGround\\BackGround.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\BackGround\\BackGround.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Object\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\PLShot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Shot\\PLShot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Lib\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\MyMath\\MyMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Lib\\MyMath\\MyMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\BackGround\\BackGround.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\BackGround\\BackGround.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Object\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\MyMath\\MyMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Lib\\MyMath\\MyMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|solutionrelative:src\\Game\\Scene\\SceneManager\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3601A8F1-B518-4979-AC27-CD404D375E74}|BlueRain~yorunohi~.vcxproj|C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\GameOver\\GameOver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -117,60 +141,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "Enemy1.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.h",
+              "RelativeDocumentMoniker": "src\\Game\\Enemy\\Enemy1.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.h",
+              "RelativeToolTip": "src\\Game\\Enemy\\Enemy1.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-01T03:42:54.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShotManager.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.h",
+              "RelativeDocumentMoniker": "src\\Game\\Shot\\ShotManager.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.h",
+              "RelativeToolTip": "src\\Game\\Shot\\ShotManager.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-30T01:26:10.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShotManager.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\Shot\\ShotManager.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.cpp",
+              "RelativeToolTip": "src\\Game\\Shot\\ShotManager.cpp",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAI0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-30T01:25:52.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Enemy1.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.cpp",
               "RelativeDocumentMoniker": "src\\Game\\Enemy\\Enemy1.cpp",
               "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.cpp",
               "RelativeToolTip": "src\\Game\\Enemy\\Enemy1.cpp",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAIwHwAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-05-01T03:42:19.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Play.cpp",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.cpp",
-              "RelativeDocumentMoniker": "src\\Game\\Scene\\Play\\Play.cpp",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.cpp",
-              "RelativeToolTip": "src\\Game\\Scene\\Play\\Play.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAIMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-23T01:10:15.733Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Play.h",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.h",
-              "RelativeDocumentMoniker": "src\\Game\\Scene\\Play\\Play.h",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.h",
-              "RelativeToolTip": "src\\Game\\Scene\\Play\\Play.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-23T01:09:22.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.cpp",
               "RelativeDocumentMoniker": "src\\Game\\player\\Player.cpp",
               "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.cpp",
               "RelativeToolTip": "src\\Game\\player\\Player.cpp",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAHUAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAG8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-23T01:41:17.876Z"
+              "WhenOpened": "2026-04-23T01:41:17.876Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
+              "Title": "Object.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.h",
+              "RelativeDocumentMoniker": "src\\Game\\Object\\Object.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.h",
+              "RelativeToolTip": "src\\Game\\Object\\Object.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-07T01:18:40.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BackGround.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\BackGround\\BackGround.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\BackGround\\BackGround.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\BackGround\\BackGround.cpp",
+              "RelativeToolTip": "src\\Game\\BackGround\\BackGround.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-12T01:15:16.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\main.cpp",
               "RelativeDocumentMoniker": "src\\Game\\main.cpp",
@@ -178,24 +244,139 @@
               "RelativeToolTip": "src\\Game\\main.cpp",
               "ViewState": "AgIAACkAAAAAAAAAAAAawEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-13T03:10:23.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T03:10:23.046Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Object.cpp",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.cpp",
-              "RelativeDocumentMoniker": "src\\Game\\Object\\Object.cpp",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.cpp",
-              "RelativeToolTip": "src\\Game\\Object\\Object.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
+              "Title": "Play.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\Scene\\Play\\Play.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.cpp",
+              "RelativeToolTip": "src\\Game\\Scene\\Play\\Play.cpp",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-07T01:18:31.738Z"
+              "WhenOpened": "2026-04-23T01:10:15.733Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "Play.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.h",
+              "RelativeDocumentMoniker": "src\\Game\\Scene\\Play\\Play.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Play\\Play.h",
+              "RelativeToolTip": "src\\Game\\Scene\\Play\\Play.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-23T01:09:22.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.h",
+              "RelativeDocumentMoniker": "src\\Game\\player\\Player.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.h",
+              "RelativeToolTip": "src\\Game\\player\\Player.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-23T01:40:50.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyShot.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\EnemyShot.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\Shot\\EnemyShot.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\EnemyShot.cpp",
+              "RelativeToolTip": "src\\Game\\Shot\\EnemyShot.cpp",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAawF8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-14T00:47:26.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyShot.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\EnemyShot.h",
+              "RelativeDocumentMoniker": "src\\Game\\Shot\\EnemyShot.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\EnemyShot.h",
+              "RelativeToolTip": "src\\Game\\Shot\\EnemyShot.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-14T00:47:40.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PLShot.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.h",
+              "RelativeDocumentMoniker": "src\\Game\\Shot\\PLShot.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.h",
+              "RelativeToolTip": "src\\Game\\Shot\\PLShot.h",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-23T02:40:58.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SceneManager.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
+              "RelativeToolTip": "src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-23T01:17:16.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MyMath.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\MyMath\\MyMath.cpp",
+              "RelativeDocumentMoniker": "src\\Lib\\MyMath\\MyMath.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\MyMath\\MyMath.cpp",
+              "RelativeToolTip": "src\\Lib\\MyMath\\MyMath.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-11T03:20:40.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BackGround.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\BackGround\\BackGround.h",
+              "RelativeDocumentMoniker": "src\\Game\\BackGround\\BackGround.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\BackGround\\BackGround.h",
+              "RelativeToolTip": "src\\Game\\BackGround\\BackGround.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-12T01:15:27.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PLShot.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\Shot\\PLShot.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.cpp",
+              "RelativeToolTip": "src\\Game\\Shot\\PLShot.cpp",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAAAHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-23T02:40:28.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Common.h",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\Common.h",
               "RelativeDocumentMoniker": "src\\Lib\\Common.h",
@@ -207,67 +388,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Object.h",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.h",
-              "RelativeDocumentMoniker": "src\\Game\\Object\\Object.h",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.h",
-              "RelativeToolTip": "src\\Game\\Object\\Object.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-07T01:18:40.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.h",
-              "RelativeDocumentMoniker": "src\\Game\\player\\Player.h",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\player\\Player.h",
-              "RelativeToolTip": "src\\Game\\player\\Player.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAE0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-23T01:40:50.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ShotManager.cpp",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.cpp",
-              "RelativeDocumentMoniker": "src\\Game\\Shot\\ShotManager.cpp",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.cpp",
-              "RelativeToolTip": "src\\Game\\Shot\\ShotManager.cpp",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAAHUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-30T01:25:52.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ShotManager.h",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.h",
-              "RelativeDocumentMoniker": "src\\Game\\Shot\\ShotManager.h",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\ShotManager.h",
-              "RelativeToolTip": "src\\Game\\Shot\\ShotManager.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-30T01:26:10.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PLShot.h",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.h",
-              "RelativeDocumentMoniker": "src\\Game\\Shot\\PLShot.h",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.h",
-              "RelativeToolTip": "src\\Game\\Shot\\PLShot.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-23T02:40:58.118Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "MyMath.h",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\MyMath\\MyMath.h",
+              "RelativeDocumentMoniker": "src\\Lib\\MyMath\\MyMath.h",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\MyMath\\MyMath.h",
+              "RelativeToolTip": "src\\Lib\\MyMath\\MyMath.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-11T03:20:53.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Object.cpp",
+              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.cpp",
+              "RelativeDocumentMoniker": "src\\Game\\Object\\Object.cpp",
+              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Object\\Object.cpp",
+              "RelativeToolTip": "src\\Game\\Object\\Object.cpp",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-07T01:18:31.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "GameOver.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\GameOver\\GameOver.cpp",
               "RelativeDocumentMoniker": "src\\Game\\Scene\\GameOver\\GameOver.cpp",
@@ -279,32 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SceneManager.cpp",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
-              "RelativeDocumentMoniker": "src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
-              "RelativeToolTip": "src\\Game\\Scene\\SceneManager\\SceneManager.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAawDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-23T01:17:16.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Enemy1.h",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.h",
-              "RelativeDocumentMoniker": "src\\Game\\Enemy\\Enemy1.h",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Enemy\\Enemy1.h",
-              "RelativeToolTip": "src\\Game\\Enemy\\Enemy1.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-01T03:42:54.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "Result.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Result\\Result.cpp",
               "RelativeDocumentMoniker": "src\\Game\\Scene\\Result\\Result.cpp",
@@ -316,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "Input.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\Input\\Input.cpp",
               "RelativeDocumentMoniker": "src\\Lib\\Input\\Input.cpp",
@@ -328,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Input.h",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\Input\\Input.h",
               "RelativeDocumentMoniker": "src\\Lib\\Input\\Input.h",
@@ -340,19 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PLShot.cpp",
-              "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.cpp",
-              "RelativeDocumentMoniker": "src\\Game\\Shot\\PLShot.cpp",
-              "ToolTip": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Shot\\PLShot.cpp",
-              "RelativeToolTip": "src\\Game\\Shot\\PLShot.cpp",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAFgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-23T02:40:28.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "Result.h",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Result\\Result.h",
               "RelativeDocumentMoniker": "src\\Game\\Scene\\Result\\Result.h",
@@ -364,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\SceneManager\\SceneManager.h",
               "RelativeDocumentMoniker": "src\\Game\\Scene\\SceneManager\\SceneManager.h",
@@ -376,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "Title.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Title\\Title.cpp",
               "RelativeDocumentMoniker": "src\\Game\\Scene\\Title\\Title.cpp",
@@ -388,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "Title.h",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\Title\\Title.h",
               "RelativeDocumentMoniker": "src\\Game\\Scene\\Title\\Title.h",
@@ -400,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "GameOver.h",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Game\\Scene\\GameOver\\GameOver.h",
               "RelativeDocumentMoniker": "src\\Game\\Scene\\GameOver\\GameOver.h",
@@ -412,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "Fade.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\Fade\\Fade.cpp",
               "RelativeDocumentMoniker": "src\\Lib\\Fade\\Fade.cpp",
@@ -424,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "Fade.h",
               "DocumentMoniker": "C:\\Users\\2409402\\Desktop\\BlueRain~yorunohi~\\src\\Lib\\Fade\\Fade.h",
               "RelativeDocumentMoniker": "src\\Lib\\Fade\\Fade.h",
@@ -436,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\2409402\\source\\repos\\BlueRain~yorunohi~\\src\\player\\main.cpp",
               "RelativeDocumentMoniker": "..\\..\\source\\repos\\BlueRain~yorunohi~\\src\\player\\main.cpp",

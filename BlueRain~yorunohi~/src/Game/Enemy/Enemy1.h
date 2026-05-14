@@ -1,10 +1,17 @@
 #pragma once
 #include<DxLib.h>
 #include"../Object/Object.h"
+#include"../Shot/ShotManager.h"
 class Enemy1 : public Object
 {
 	float x;
 	float y;
+	int m_shotwait;
+	int m_count;
+	VECTOR m_speed;
+
+	bool m_waitflg;
+	int m_waitTimer;
 public:
 	//コンストラクタ・デストラクタ
 	Enemy1();
@@ -17,7 +24,7 @@ public:
 	//終了
 	void Exit();
 	//毎フレーム処理
-	void Step();
+	void Step(ShotManager &shotmanager);
 	
 	//描画
 	void Draw();
