@@ -36,8 +36,9 @@ void ShotManager::Init()
 	
 	m_hndl = -1;
 	
-
+	count = 700;
 	m_Rot = 0.0f;
+	
 }
 
 //ロード
@@ -78,6 +79,7 @@ void ShotManager::Exit()
 //毎フレーム呼ぶ処理
 void ShotManager::Step()
 {
+	
 	for (int i = 0; i < PL_SHOT_NUM; i++)
 	{
 
@@ -132,13 +134,18 @@ void ShotManager::RequestPlayerShot(const VECTOR& Pos, const float& Speed)
 }
 
 //プレイヤーのショットリクエスト
-void ShotManager::RequestEnemyShot(const VECTOR& Pos, const VECTOR& Speed ,const int& count)
+void ShotManager::RequestEnemyShot(const VECTOR& Pos, const VECTOR& Speed)
 {
 	VECTOR Spd = Speed;
-
+	static int count = 700;
+	float angle = 0.0f;
+	int rand = GetRand(4);
+	
 	
 	for (int i = 0; i < ENE_SHOT_NUM; i++)
 	{
+		
+		
 		
 		if (m_EnemyShot[i].RequestShot(Pos, Spd))
 		{

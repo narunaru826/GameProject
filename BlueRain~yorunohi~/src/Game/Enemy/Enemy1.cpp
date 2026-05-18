@@ -64,7 +64,7 @@ void Enemy1::Init()
 	m_count = 0;
 	m_Rand = GetRand(2);
 	
-	x = -6.0f;
+	x = -1.7f;
 	y = 0.0f;
 
 	m_shotwait = 0;
@@ -75,6 +75,9 @@ void Enemy1::Init()
 
 	m_waitflg = false;
 	m_waitTimer = 10;
+
+	m_Pos.x = WINDOW_SENTER_X;
+	m_Pos.y = WINDOW_SENTER_Y ;
 }
 
 //ロード
@@ -127,7 +130,7 @@ bool Enemy1::Request(const VECTOR& pos, const VECTOR& speed)
 
 
 //毎フレーム
-void Enemy1::Step(ShotManager &shotmanager)
+void Enemy1::Step(ShotManager &shotmanager, Player& player)
 {
 	//生存フラグオフの場合は終了
 	if (!m_isActive)
@@ -136,29 +139,34 @@ void Enemy1::Step(ShotManager &shotmanager)
 	}
 	/*m_Pos.x += 1;
 	m_Pos.y = 5 * cosf(m_Pos.x) - cosf(5 * m_Pos.x);*/
-	y = WaveMove(x);
-	//y = x / 10 * ceil(x * x * tanf(x * x));
-	//y = Gcd(x, 16);
-	x += 0.25;
+	//プレイヤー=======================================
+	//関数一覧
+	//y = WaveMove(x);
+	
+	y = HeartFunc(x);
+	
+
+
+
+	x += 0.005;
 	/*if (x > 29.0f)
 	{
 		x = -6.0f;
 	}*/
-	m_Pos.x = WINDOW_SENTER_X - 600 + (int)(x * 50);
-	m_Pos.y = WINDOW_SENTER_Y - 300 - (int)(y * 20);
+	m_Pos.x = ConvertX(x);
+	m_Pos.y = ConvertY(y);
+	//===================================================
+	//弾の処理
 	m_shotwait--;
 	if (m_shotwait < 0) {
 		m_count++;
-		shotmanager.RequestEnemyShot(m_Pos, m_speed,m_count);
+		shotmanager.RequestEnemyShot(m_Pos, m_speed);
 		m_shotwait = SHOTWAIT;
 		
 	}
 	
-	
-	//m_Pos.y += 1;
-
 	//移動制限
-	if (m_Pos.x < -87 || m_Pos.x > 1030 ||
+	if (m_Pos.x < -100 || m_Pos.x > 1030 ||
 		m_Pos.y < 0 || m_Pos.y > 900)
 	{
 		m_isActive = false;

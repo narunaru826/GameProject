@@ -1,5 +1,5 @@
 #include"EnemyShot.h"
-
+#include<math.h>
 //定義
 
 #define RADIUS (2)
@@ -33,7 +33,9 @@ void ShotEnemy::Init()
 	m_Radius = RADIUS;
 	m_isActive = false;
 	m_waitflg = false;
-	m_waitTimer = 60;
+	m_waitTimer = 700;
+	m_Angle = 0;
+	
 }
 
 //終了
@@ -59,7 +61,7 @@ void ShotEnemy::Load(int hndl)
 //描画
 void ShotEnemy::Draw()
 {
-
+	
 	if (m_isActive)
 	{
 		DrawCircle(m_Pos.x, m_Pos.y, 6, GetColor(255, 0, 0));
@@ -86,15 +88,24 @@ void ShotEnemy::Step()
 	//m_Speed = VGet(mat1.m[3][0], mat1.m[3][1], mat1.m[3][2]);
 
 	////座標に速度を加算
-	m_Pos = VAdd(m_Pos,m_Speed);
+	float speed = 5.0f;
+
+	m_x = cosf(m_Angle ) * speed;
+	m_y = sinf(m_Angle) * speed;
+	
 	if (!m_waitflg)
 	{
 		m_waitTimer--;
-		if (m_waitTimer < 0)
+		if (m_waitTimer <= 0)
 		{
-			m_Speed.y = 7;
-			m_Speed.x = -3;
+			m_waitflg = true;
 		}
+	}
+	else
+	{
+		m_Angle += 0.005f ;
+		m_Pos.x += m_x;
+		m_Pos.y += m_y;
 	}
 	//一定範囲を超えたら消す
 	float Length = 0.0f;
@@ -103,12 +114,11 @@ void ShotEnemy::Step()
 		m_isActive = false;
 	}
 
-	//座標更新
-	//MV1SetPosition(m_hndl, m_Pos);
+	
 }
 
 //リクエスト
-bool ShotEnemy::RequestShot(const VECTOR& Pos, const VECTOR& Speed)
+bool ShotEnemy::RequestShot(const VECTOR& Pos, const VECTOR& Speed )
 {
 	//すでに発射されている
 	if (m_isActive)
@@ -118,7 +128,7 @@ bool ShotEnemy::RequestShot(const VECTOR& Pos, const VECTOR& Speed)
 
 	m_Pos = Pos;
 	m_Speed = Speed;
-
+	
 	m_isActive = true;
 
 

@@ -16,6 +16,7 @@ private:
 
 	float m_Rot;
 	int m_hndl;
+	int count;
 	
 
 public:
@@ -38,7 +39,7 @@ public:
 	void RequestPlayerShot(const VECTOR& Pos, const float& Speed);
 
 	//プレイヤーのショットリクエスト
-	void RequestEnemyShot(const VECTOR& Pos, const VECTOR& Speed, const int& count);
+	void RequestEnemyShot(const VECTOR& Pos, const VECTOR& Speed);
 	
 	
 	//プレイヤーのショットの情報取得

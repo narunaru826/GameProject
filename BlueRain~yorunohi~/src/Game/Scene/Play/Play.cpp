@@ -132,7 +132,7 @@ void Play::Step()
 	m_BackGround.Step();
 	m_Player.Step(m_ShotManager);
 	m_ShotManager.Step();
-	m_Enemy1.Step(m_ShotManager);
+	m_Enemy1.Step(m_ShotManager,m_Player);
 }
 
 bool Play::Flg()

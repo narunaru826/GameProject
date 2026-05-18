@@ -5,6 +5,8 @@ class ShotEnemy
 {
 private:
 	VECTOR m_Pos;		//座標
+	float m_x;
+	float m_y;
 	VECTOR m_Speed;		//移動速度
 	VECTOR m_Rot;
 	float m_Radius;		//移動速度
@@ -13,7 +15,9 @@ private:
 
 	bool m_waitflg;
 	int m_waitTimer;
-
+	float m_Angle;
+	
+	
 public:
 	//コンストラクタ・デストラクタ
 	ShotEnemy();

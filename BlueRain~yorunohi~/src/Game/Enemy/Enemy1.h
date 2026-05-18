@@ -2,6 +2,7 @@
 #include<DxLib.h>
 #include"../Object/Object.h"
 #include"../Shot/ShotManager.h"
+#include"../player/Player.h"
 class Enemy1 : public Object
 {
 	float x;
@@ -24,7 +25,7 @@ public:
 	//I—¹
 	void Exit();
 	//–ˆƒtƒŒ[ƒ€ˆ—
-	void Step(ShotManager &shotmanager);
+	void Step(ShotManager &shotmanager ,Player &player);
 	
 	//•`‰æ
 	void Draw();

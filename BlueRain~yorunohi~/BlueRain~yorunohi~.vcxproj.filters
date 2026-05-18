@@ -125,9 +125,6 @@
     <ClCompile Include="src\Game\Scene\SceneManager\SceneManager.cpp">
       <Filter>ソース ファイル\Game\Scene\SceneManager</Filter>
     </ClCompile>
-    <ClCompile Include="src\Game\main.cpp">
-      <Filter>ソース ファイル\Game</Filter>
-    </ClCompile>
     <ClCompile Include="src\Lib\Fade\Fade.cpp">
       <Filter>ソース ファイル\Lib\Fade</Filter>
     </ClCompile>
@@ -149,9 +146,6 @@
     <ClCompile Include="src\Game\Enemy\Enemy1.cpp">
       <Filter>ソース ファイル\Game\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="src\Game\Object\Object.cpp">
-      <Filter>ソース ファイル\Game\Object</Filter>
-    </ClCompile>
     <ClCompile Include="src\Lib\MyMath\MyMath.cpp">
       <Filter>ソース ファイル\Lib\MyMath</Filter>
     </ClCompile>
@@ -160,6 +154,12 @@
     </ClCompile>
     <ClCompile Include="src\Game\Shot\EnemyShot.cpp">
       <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\main.cpp">
+      <Filter>ソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Object\Object.cpp">
+      <Filter>ソース ファイル\Game\Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -135,8 +135,8 @@ void Player::Update()
 void Player::Draw()
 {
 	DrawCircle(m_Pos.x, m_Pos.y, 16, GetColor(255, 255, 0));
-	DrawFormatString(20, 20, GetColor(255, 0, 0), "PLのX座標:%.2f", m_Pos.x);
-	DrawFormatString(20, 40, GetColor(255, 0, 0), "PLのY座標:%.2f", m_Pos.y);
+	//DrawFormatString(20, 20, GetColor(255, 0, 0), "PLのX座標:%.2f", m_Pos.x);
+	//DrawFormatString(20, 40, GetColor(255, 0, 0), "PLのY座標:%.2f", m_Pos.y);
 }
 
 void Player::Exit()
