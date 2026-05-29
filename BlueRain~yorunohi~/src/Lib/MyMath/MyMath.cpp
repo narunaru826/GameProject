@@ -24,5 +24,5 @@ int ConvertX(float x)
 }
 int ConvertY(float y)
 {
-	return WINDOW_SENTER_Y - 300 - (int)(y * 50);
+	return WINDOW_SENTER_Y  - (int)(y * 50);
 }

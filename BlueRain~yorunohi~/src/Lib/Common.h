@@ -24,4 +24,4 @@ const int GREEN = GetColor(0, 255, 0);		//—Î
 const VECTOR ZERO = VGet(0.0f, 0.0f, 0.0f);
 
 const int RADIUS = 5;
-const int ENEMYLIFE = 5;
+const int ENEMYLIFE = 3500;

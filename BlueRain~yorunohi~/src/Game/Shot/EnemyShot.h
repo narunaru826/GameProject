@@ -1,6 +1,6 @@
 #pragma once
 #include<DxLib.h>
-
+#include"../Player/Player.h"
 class ShotEnemy
 {
 private:
@@ -17,7 +17,7 @@ private:
 	int m_waitTimer;
 	float m_Angle;
 	
-	
+	VECTOR m_pl;
 public:
 	//コンストラクタ・デストラクタ
 	ShotEnemy();
@@ -31,7 +31,7 @@ public:
 	//終了処理
 	void Exit();
 	//毎フレーム呼ぶ処理
-	void Step();
+	void Step(Player &Player);
 	//描画
 	void Draw();
 
@@ -64,4 +64,7 @@ public:
 	{
 		return m_hndl;
 	}
+	void Shot();
+
+
 };

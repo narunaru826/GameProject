@@ -1,6 +1,6 @@
 #pragma once
 #include <DxLib.h>
-#include"../Shot/ShotManager.h"
+//#include"../Shot/ShotManager.h"
 //#include"ShotManager.h"
 //#include"EnemyManager.h"
 //#include"CameraManager.h"
@@ -37,7 +37,7 @@ private:
 	float m_gravity;
 	bool flgchan;
 	float camRotX;
-
+	int m_invicount;
 
 	VECTOR Ene;
 public:
@@ -49,7 +49,7 @@ public:
 
 	void Load();
 
-	void Step(ShotManager &shotmanager);
+	void Step(/*ShotManager &shotmanager*/);
 	void Update();
 
 	void Draw();
@@ -98,5 +98,19 @@ public:
 		flgchan = flg;
 	}
 	
+	int GetPlayerLife()
+	{
+		return m_PlayerLife;
+	}
+
+	bool GetIsActive()
+	{
+		return m_isActive;
+	}
+
+	bool GetInviCount()
+	{
+		return m_invicount;
+	}
 };
 

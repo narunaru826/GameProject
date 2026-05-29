@@ -76,12 +76,18 @@ void Enemy1::Init()
 	m_waitflg = false;
 	m_waitTimer = 10;
 
-	m_Pos.x = WINDOW_SENTER_X;
-	m_Pos.y = WINDOW_SENTER_Y ;
+	m_Pos.x = WINDOW_SENTER_X + 300;
+	m_Pos.y = WINDOW_SENTER_Y - 300;
+
+	m_RequestCount = 220;
+
+	m_RequestPostionState = 0;
+
+
 }
 
 //ロード
-void Enemy1::Load(int hndl)
+void Enemy1::Load()
 {
 	
 }
@@ -89,7 +95,11 @@ void Enemy1::Load(int hndl)
 //終了
 void Enemy1::Exit()
 {
-	
+	if (m_hndl != -1)
+	{
+		DeleteGraph(m_hndl);
+		m_hndl = -1;
+	}
 }
 
 
@@ -102,8 +112,9 @@ void Enemy1::Draw()
 	//	return;
 	//}
 	if (m_isActive) {
-		DrawCircle(m_Pos.x, m_Pos.y, 30, GetColor(0, 0, 255));
+		//DrawCircle(m_Pos.x, m_Pos.y, 30, GetColor(0, 0, 255));
 	}
+	DrawFormatString(20, 20, GetColor(255, 0, 0), "弾が発射された数:%d", m_count);
 #ifdef MY_DEBUG
 	VECTOR Pos = m_Pos;
 	//Pos.y = m_Radius;
@@ -135,7 +146,15 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 	//生存フラグオフの場合は終了
 	if (!m_isActive)
 	{
-		return;
+		m_RequestCount--;
+		if (m_RequestCount < 0) {
+			m_Pos.x = WINDOW_SENTER_X;
+			m_Pos.y = WINDOW_SENTER_Y;
+			x = -1.7f;
+			Request(m_Pos, m_Speed);
+
+			m_RequestCount = 220;
+		}
 	}
 	/*m_Pos.x += 1;
 	m_Pos.y = 5 * cosf(m_Pos.x) - cosf(5 * m_Pos.x);*/
@@ -145,24 +164,47 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 	
 	y = HeartFunc(x);
 	
-
-
-
-	x += 0.005;
-	/*if (x > 29.0f)
+	x += 0.025;
+	
+	switch (m_RequestPostionState)
 	{
-		x = -6.0f;
-	}*/
-	m_Pos.x = ConvertX(x);
-	m_Pos.y = ConvertY(y);
+	case 0:
+		m_Pos.x = ConvertX(x);
+		m_Pos.y = ConvertY(y) - 300;
+		if (!m_isActive)
+		{
+			m_RequestPostionState = 1;
+		}
+		break;
+
+	case 1:
+		m_Pos.x = ConvertX(x) + 300;
+		m_Pos.y = ConvertY(y) - 300;
+		if (!m_isActive)
+		{
+			m_RequestPostionState = 2;
+		}
+		break;
+	case 2:
+		m_Pos.x = ConvertX(x) - 300;
+		m_Pos.y = ConvertY(y) - 300;
+		if (!m_isActive)
+		{
+			m_RequestPostionState = 0;
+		}
+		break;
+	}
+	
 	//===================================================
 	//弾の処理
-	m_shotwait--;
-	if (m_shotwait < 0) {
-		m_count++;
-		shotmanager.RequestEnemyShot(m_Pos, m_speed);
-		m_shotwait = SHOTWAIT;
-		
+	if (m_isActive) {
+		m_shotwait--;
+		if (m_shotwait < 0) {
+			m_count++;
+			shotmanager.RequestEnemyShot(m_Pos, m_speed);
+			m_shotwait = SHOTWAIT;
+
+		}
 	}
 	
 	//移動制限

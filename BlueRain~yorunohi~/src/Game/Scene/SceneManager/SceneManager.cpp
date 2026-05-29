@@ -1,7 +1,7 @@
 #include "SceneManager.h"
 //#include "SoundManager.h"
 #include "../../../lib/Common.h"
-
+#include"../../../Lib//Fade/Fade.h"
 //定義関連-----------------------
 
 //-------------------------------
@@ -24,13 +24,14 @@ void SceneManager::Init()
 {
 
 	Play.InitScene();
-
+	CFade::Init();
 
 }
 //毎フレーム処理
 int SceneManager::Loop()
 {
 	int Ret = 0;
+	CFade::Step();
 	//switch
 	switch (m_SceneID)
 	{
@@ -85,6 +86,7 @@ int SceneManager::Loop()
 		}
 		break;
 	}
+	
 	return Ret;
 }
 
@@ -112,4 +114,5 @@ void SceneManager::Draw()
 		GameoverScene.Draw();
 		break;
 	}
+	CFade::Draw();
 }

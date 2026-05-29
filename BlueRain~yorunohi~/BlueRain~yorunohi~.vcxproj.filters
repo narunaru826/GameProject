@@ -61,6 +61,15 @@
     <Filter Include="ソース ファイル\Game\BackGround">
       <UniqueIdentifier>{640356d1-c62f-4d8e-aa4c-948a4e3ab95d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Game\Collision">
+      <UniqueIdentifier>{48c14328-ca97-49a9-8efa-47996e44cd05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Lib\collision">
+      <UniqueIdentifier>{5384d1d9-a708-4c2a-8a38-4aec65ab805c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Life">
+      <UniqueIdentifier>{20b19fe7-d505-4ab4-aea5-3bc562483c19}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Lib\Common.h">
@@ -111,6 +120,30 @@
     <ClInclude Include="src\Game\Shot\EnemyShot.h">
       <Filter>ソース ファイル\Game\Shot</Filter>
     </ClInclude>
+    <ClInclude Include="src\Game\Enemy\Enemy2.h">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Enemy\Enemy3.h">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Enemy\Boss1.h">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Shot\BossShot.h">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lib\collision\col.h">
+      <Filter>ソース ファイル\Lib\collision</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\CollisionManager\Collision.h">
+      <Filter>ソース ファイル\Game\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Enemy\EnemyManager.h">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Life\Life.h">
+      <Filter>ソース ファイル\Game\Life</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game\Scene\Result\Result.cpp">
@@ -160,6 +193,30 @@
     </ClCompile>
     <ClCompile Include="src\Game\Object\Object.cpp">
       <Filter>ソース ファイル\Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\Enemy2.cpp">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\Enemy3.cpp">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\Boss1.cpp">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Shot\BossShot.cpp">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lib\collision\col.cpp">
+      <Filter>ソース ファイル\Lib\collision</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\CollisionManager\Collision.cpp">
+      <Filter>ソース ファイル\Game\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\EnemyManager.cpp">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Life\Life.cpp">
+      <Filter>ソース ファイル\Game\Life</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

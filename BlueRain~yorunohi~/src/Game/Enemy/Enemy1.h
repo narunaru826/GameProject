@@ -13,6 +13,12 @@ class Enemy1 : public Object
 
 	bool m_waitflg;
 	int m_waitTimer;
+
+	int m_RequestCount;
+
+	int m_RequestPostionState;
+
+
 public:
 	//コンストラクタ・デストラクタ
 	Enemy1();
@@ -21,7 +27,7 @@ public:
 	//初期化
 	void Init();
 	//ロード
-	void Load(int hndl);
+	void Load();
 	//終了
 	void Exit();
 	//毎フレーム処理

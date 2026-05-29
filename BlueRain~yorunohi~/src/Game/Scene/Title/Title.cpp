@@ -2,6 +2,7 @@
 #include "../../../Lib/Common.h"
 #include "../../../Lib/Fade/Fade.h"
 //#include "TitleFade.h"
+#include"../../../Lib/Fade/Fade.h"
 #include "../../../Lib/Input/Input.h"
 //#include "../../System/Sound/SoundManager.h"
 
@@ -48,15 +49,20 @@ int TitleScene::Loop()
 		Step();
 		if (IsInputTrg(KEY_CHOICE))
 		{
+			CFade::RequestFadeOut();
 			m_SceneID = TITLE_SCENE_END;
 		}
+		
 		break;
 	case TITLE_SCENE_END:
 		Exit();
-		
-		m_SceneID = TITLE_SCENE_INIT;
-		Ret = 1;
-		break;
+		if (CFade::IsEndFadeOut(CFade::GetFadeId())) {
+
+
+			m_SceneID = TITLE_SCENE_INIT;
+			Ret = 1;
+			break;
+		}
 	}
 	return Ret;
 }
@@ -69,7 +75,7 @@ void TitleScene::Draw()
 	case TITLE_SCENE_LOAD:
 	case TITLE_SCENE_LOOP:
 	case TITLE_SCENE_END:
-		DrawRotaGraph(1280 / 2, 720 / 2, 1.0f, 0.0f, m_hndl, TRUE);
+		DrawRotaGraph(1600 / 2, 900 / 2, 1.0f, 0.0f, m_hndl, TRUE);
 		DrawFormatString(40, 30, GetColor(255, 0, 0), "ƒ^ƒCƒgƒ‹");
 		break;
 	}
@@ -97,7 +103,7 @@ void TitleScene::Load()
 {
 	if (m_hndl == -1)
 	{
-		m_hndl = LoadGraph("data/model/title.png");
+		m_hndl = LoadGraph("data/title/title.png");
 	}
 }
 

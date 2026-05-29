@@ -38,7 +38,7 @@ int ResultScene::Loop()
 		break;
 	case RESULT_SCENE_LOOP:
 		Step();
-		if (CheckHitKey(KEY_INPUT_C))
+		if (IsInputTrg(KEY_CHOICE))
 		{
 			m_SceneID = RESULT_SCENE_END;
 		}
@@ -62,13 +62,13 @@ void ResultScene::Draw()
 	case RESULT_SCENE_LOOP:
 	case RESULT_SCENE_END:
 		if (m_resultcount == 0) {
-			DrawRotaGraph(1280 / 2, 720 / 2, 1.0f, 0.0f, m_hndl, TRUE);
+			DrawRotaGraph(1600 / 2, 900 / 2, 1.0f, 0.0f, m_hndl, TRUE);
 		}
 		if (m_resultcount == 1)
 		{
 			DrawRotaGraph(1280 / 2, 720 / 2, 1.0f, 0.0f, m_gameoverhndl, TRUE);
 		}
-		DrawFormatString(640, 360, GetColor(255, 0, 0), "リザルト");
+		//DrawFormatString(640, 360, GetColor(255, 0, 0), "リザルト");
 		break;
 	}
 
@@ -103,7 +103,7 @@ void ResultScene::Load()
 {
 	if (m_hndl == -1)
 	{
-		m_hndl = LoadGraph("data/model/result.png");
+		m_hndl = LoadGraph("Data/result.png");
 	}
 
 	if (m_gameoverhndl == -1)

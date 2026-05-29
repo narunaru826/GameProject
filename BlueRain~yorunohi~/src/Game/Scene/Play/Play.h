@@ -3,7 +3,12 @@
 #include"../../../Game/player/Player.h"
 #include"../../../Game/Shot/ShotManager.h"
 #include"../../Enemy/Enemy1.h"
+#include"../../Enemy/Enemy2.h"
+#include"../../Enemy/Enemy3.h"
+#include"../../Enemy/Boss1.h"
+#include"../../Enemy/EnemyManager.h"
 #include"../../BackGround/BackGround.h"
+#include"../../Life/Life.h"
 class Play
 {
 private:
@@ -21,7 +26,12 @@ private:
 	Player m_Player;
 	ShotManager m_ShotManager;
 	Enemy1 m_Enemy1;
+	Enemy2 m_Enemy2;
+	Enemy3 m_Enemy3;
+	Boss1 m_Boss1;
 	BackGround m_BackGround;
+	EnemyManager m_EnemyManager;
+	Life m_life;
 	tagPLAY_SCENE m_SceneID;	//シーン保存
 public:
 	//コンストラクタ・デストラクタ

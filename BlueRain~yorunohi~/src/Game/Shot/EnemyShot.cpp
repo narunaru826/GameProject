@@ -1,5 +1,6 @@
 #include"EnemyShot.h"
 #include<math.h>
+
 //定義
 
 #define RADIUS (2)
@@ -75,41 +76,27 @@ void ShotEnemy::Draw()
 }
 
 //毎フレーム呼ぶ処理
-void ShotEnemy::Step()
+void ShotEnemy::Step(Player& Player)
 {
 	if (!m_isActive)
 	{
 		return;
 	}
-	//MATRIX	mat1, mat2;
-	//mat1 = MGetTranslate(m_Speed);
-	//mat2 = MGetRotY(m_Rot);
-	//mat1 = MMult(mat1, mat2);
-	//m_Speed = VGet(mat1.m[3][0], mat1.m[3][1], mat1.m[3][2]);
-
-	////座標に速度を加算
-	float speed = 5.0f;
-
-	m_x = cosf(m_Angle ) * speed;
-	m_y = sinf(m_Angle) * speed;
 	
-	if (!m_waitflg)
-	{
-		m_waitTimer--;
-		if (m_waitTimer <= 0)
-		{
-			m_waitflg = true;
-		}
-	}
-	else
-	{
-		m_Angle += 0.005f ;
-		m_Pos.x += m_x;
-		m_Pos.y += m_y;
-	}
+
+	
+	//座標に速度を加算
+	float speed = 5.0f;
+	
+	
+	m_Pos = VAdd(m_Pos, m_Speed);
 	//一定範囲を超えたら消す
-	float Length = 0.0f;
-	if (m_Pos.y < -Length)
+	
+	if (m_Pos.y > 900 || m_Pos.y < 0)
+	{
+		m_isActive = false;
+	}
+	if (m_Pos.x > 1030 || m_Pos.x < 0)
 	{
 		m_isActive = false;
 	}
@@ -138,4 +125,10 @@ bool ShotEnemy::RequestShot(const VECTOR& Pos, const VECTOR& Speed )
 void ShotEnemy::Hit()
 {
 	m_isActive = false;
+}
+
+void ShotEnemy::Shot()
+{
+
+	
 }

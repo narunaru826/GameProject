@@ -8,14 +8,13 @@
 //定義関連
 
 static const float ROTATE_SPEED = 0.01f;
-static const float MOVE_SPEED = 4.0f;
-static const float SLOW_SPEED = 2.0f;
+static const float MOVE_SPEED = 6.0f;
+static const float SLOW_SPEED = 3.0f;
 
-#define SHOTWAIT (3)
-#define SHOTSPEED (30)
+
 #define RADIUS (10)
 //#define MY_DEBUG
-#define PL_LIFE (1000)
+#define PL_LIFE (10)
 #define GRAVITY (0.09f)
 //コンストラクタ
 Player::Player()
@@ -46,6 +45,9 @@ void Player::Init()
 	m_hndl = -1;
 	m_shotWait = 0;
 	m_gravity = 0.0f;
+	m_PlayerLife = PL_LIFE;
+
+	m_invicount = 0;
 }
 //初期化
 void Player::Init(VECTOR Pos, VECTOR Rot)
@@ -54,17 +56,21 @@ void Player::Init(VECTOR Pos, VECTOR Rot)
 	m_Rot = Rot;
 	memset(&m_Speed, 0, sizeof(VECTOR));
 	m_State = PLAYER_STATE_NORMAL;
-
+	m_hndl = -1;
+	m_isActive = true;
 	m_Rot.y = (DX_PI_F / 180) * 180;
 }
 
 void Player::Load()
 {
 	
-
+	if (m_hndl == -1)
+	{
+		m_hndl = LoadGraph("Data/Player1.png");
+	}
 }
 
-void Player::Step(ShotManager& shotmanager)
+void Player::Step(/*ShotManager& shotmanager*/)
 {
 	//移動処理
 	float spd = 0.0f;
@@ -111,7 +117,7 @@ void Player::Step(ShotManager& shotmanager)
 		m_Pos.y = 900;
 	}
 	//弾ちゃん
-	m_shotWait--;
+	/*m_shotWait--;
 	if (m_shotWait < 0)
 	{
 		shotmanager.RequestPlayerShot(VGet(m_Pos.x + 10, m_Pos.y - 10, 0.0f), SHOTSPEED);
@@ -119,12 +125,18 @@ void Player::Step(ShotManager& shotmanager)
 		shotmanager.RequestPlayerShot(VGet(m_Pos.x + 30, m_Pos.y, 0.0f), SHOTSPEED);
 		shotmanager.RequestPlayerShot(VGet(m_Pos.x - 30, m_Pos.y, 0.0f), SHOTSPEED);
 		m_shotWait = SHOTWAIT;
+	}*/
+	
+	if (m_invicount > 0)
+	{
+		m_invicount--;
 	}
-	
-	
 
 	//m_Pos = VAdd(m_Pos, m_Speed);
-	
+	if (m_invicount < 0)
+	{
+		m_isActive = true;
+	}
 }
 
 void Player::Update()
@@ -135,17 +147,34 @@ void Player::Update()
 void Player::Draw()
 {
 	DrawCircle(m_Pos.x, m_Pos.y, 16, GetColor(255, 255, 0));
+	if (m_isActive)
+	{
+		DrawRotaGraph(m_Pos.x, m_Pos.y, 0.1f, 0.0f, m_hndl, TRUE);
+	}
 	//DrawFormatString(20, 20, GetColor(255, 0, 0), "PLのX座標:%.2f", m_Pos.x);
 	//DrawFormatString(20, 40, GetColor(255, 0, 0), "PLのY座標:%.2f", m_Pos.y);
 }
 
 void Player::Exit()
 {
-	
+	if (m_hndl != -1)
+	{
+		DeleteGraph(m_hndl);
+		m_hndl = -1;
+	}
 }
 //当たった
 bool Player::Hit()
 {
+	m_Pos.y = 900;
+	m_invicount = 120;
+	
+	m_PlayerLife--;
+	if (m_PlayerLife <= 0)
+	{
+		m_isActive = false;
+		return false;
+	}
 	return true;
 }
 
