@@ -4,6 +4,7 @@
 #include"../Result/Result.h"
 //#include"CommentScene.h"
 #include"../GameOver/GameOver.h"
+#include"../Choice/ChoiceScene.h"
 #include"time.h"
 
 class SceneManager
@@ -11,11 +12,11 @@ class SceneManager
 private:
 	enum tagSCENE {
 		SCENE_TITLE,
-		SCENE_COMMENT,
-		SCENE_WAVE1,
-		SCENE_WAVE2,
-		SCENE_WAVE3,
-		SCENE_WAVE4,
+		SCENE_CHOICE,
+		SCENE_STAGE1,
+		SCENE_STAGE2,
+		
+	
 		SCENE_GAMEOVER,
 		SCENE_RESULT,
 
@@ -23,10 +24,12 @@ private:
 	};
 	TitleScene TitleScene;
 	Play Play;
+	
 
 	ResultScene ResultScene;
 	//CommentScene CommentScene;
 	GameOverScene GameoverScene;
+	ChoiceScene m_choice;
 	//Time time;
 	tagSCENE m_SceneID;	//	ÉVÅ[Éìï€ë∂
 

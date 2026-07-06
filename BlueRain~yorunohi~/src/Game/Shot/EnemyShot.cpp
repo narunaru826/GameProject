@@ -65,7 +65,7 @@ void ShotEnemy::Draw()
 	
 	if (m_isActive)
 	{
-		DrawCircle(m_Pos.x, m_Pos.y, 6, GetColor(255, 0, 0));
+		DrawCircle(m_Pos.x, m_Pos.y, 6, GetColor(234, 145, 152));
 		//MV1DrawModel(m_hndl);
 #ifdef MY_DEBUG
 		VECTOR Pos = m_Pos;

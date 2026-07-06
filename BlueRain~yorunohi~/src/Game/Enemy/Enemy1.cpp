@@ -6,8 +6,6 @@
 
 //#define MY_DEBUG 
 
-static const int ROOT_ID[] = { 1,2,3,4,5 };
-static const int ROOT_NUM = 5;
 
 
 #define SHOTWAIT (0)
@@ -114,7 +112,7 @@ void Enemy1::Draw()
 	if (m_isActive) {
 		//DrawCircle(m_Pos.x, m_Pos.y, 30, GetColor(0, 0, 255));
 	}
-	DrawFormatString(20, 20, GetColor(255, 0, 0), "íeÇ™î≠éÀÇ≥ÇÍÇΩêî:%d", m_count);
+	//DrawFormatString(20, 20, GetColor(255, 0, 0), "íeÇ™î≠éÀÇ≥ÇÍÇΩêî:%d", m_count);
 #ifdef MY_DEBUG
 	VECTOR Pos = m_Pos;
 	//Pos.y = m_Radius;
@@ -169,8 +167,8 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 	switch (m_RequestPostionState)
 	{
 	case 0:
-		m_Pos.x = ConvertX(x);
-		m_Pos.y = ConvertY(y) - 300;
+		m_Pos.x = ConvertX(x,50);
+		m_Pos.y = ConvertY(y, 50) - 300;
 		if (!m_isActive)
 		{
 			m_RequestPostionState = 1;
@@ -178,16 +176,16 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 		break;
 
 	case 1:
-		m_Pos.x = ConvertX(x) + 300;
-		m_Pos.y = ConvertY(y) - 300;
+		m_Pos.x = ConvertX(x,50) + 300;
+		m_Pos.y = ConvertY(y,50) - 300;
 		if (!m_isActive)
 		{
 			m_RequestPostionState = 2;
 		}
 		break;
 	case 2:
-		m_Pos.x = ConvertX(x) - 300;
-		m_Pos.y = ConvertY(y) - 300;
+		m_Pos.x = ConvertX(x,50) - 300;
+		m_Pos.y = ConvertY(y,50) - 300;
 		if (!m_isActive)
 		{
 			m_RequestPostionState = 0;

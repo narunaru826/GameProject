@@ -42,27 +42,35 @@ int TitleScene::Loop()
 		m_SceneID = TITLE_SCENE_LOAD;
 		break;
 	case TITLE_SCENE_LOAD:
+		CFade::RequestFadeIn();
 		Load();
 		m_SceneID = TITLE_SCENE_LOOP;
 		break;
 	case TITLE_SCENE_LOOP:
-		Step();
-		if (IsInputTrg(KEY_CHOICE))
-		{
-			CFade::RequestFadeOut();
+		if (CFade::IsEndFadeIn(CFade::GetFadeId())) {
+			Step();
+			if (IsInputTrg(KEY_CHOICE))
+			{
+				CFade::RequestFadeOut();
+				m_SceneID = TITLE_SCENE_ENDWAIT;
+			}
+		}
+		break;
+
+	case TITLE_SCENE_ENDWAIT:
+		if (CFade::IsEndFadeOut(CFade::GetFadeId())) {
 			m_SceneID = TITLE_SCENE_END;
 		}
-		
 		break;
 	case TITLE_SCENE_END:
 		Exit();
-		if (CFade::IsEndFadeOut(CFade::GetFadeId())) {
+		
 
 
 			m_SceneID = TITLE_SCENE_INIT;
 			Ret = 1;
 			break;
-		}
+		
 	}
 	return Ret;
 }
@@ -74,6 +82,7 @@ void TitleScene::Draw()
 	case TITLE_SCENE_INIT:
 	case TITLE_SCENE_LOAD:
 	case TITLE_SCENE_LOOP:
+	case TITLE_SCENE_ENDWAIT:
 	case TITLE_SCENE_END:
 		DrawRotaGraph(1600 / 2, 900 / 2, 1.0f, 0.0f, m_hndl, TRUE);
 		DrawFormatString(40, 30, GetColor(255, 0, 0), "ƒ^ƒCƒgƒ‹");

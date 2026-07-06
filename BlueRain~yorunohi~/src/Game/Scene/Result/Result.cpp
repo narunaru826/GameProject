@@ -33,22 +33,33 @@ int ResultScene::Loop()
 		m_SceneID = RESULT_SCENE_LOAD;
 		break;
 	case RESULT_SCENE_LOAD:
+		CFade::RequestFadeIn();
 		Load();
 		m_SceneID = RESULT_SCENE_LOOP;
 		break;
 	case RESULT_SCENE_LOOP:
-		Step();
-		if (IsInputTrg(KEY_CHOICE))
-		{
+		if (CFade::IsEndFadeIn(CFade::GetFadeId())) {
+			Step();
+			if (IsInputTrg(KEY_CHOICE))
+			{
+				CFade::RequestFadeOut();
+				m_SceneID = RESULT_SCENE_ENDWAIT;
+			}
+		}
+		break;
+	case RESULT_SCENE_ENDWAIT:
+		if (CFade::IsEndFadeOut(CFade::GetFadeId())) {
 			m_SceneID = RESULT_SCENE_END;
 		}
 		break;
 	case RESULT_SCENE_END:
 		Exit();
-		m_SceneID = RESULT_SCENE_INIT;
-		m_resultcount = 0;
-		Ret = 1;
-		break;
+		
+			m_SceneID = RESULT_SCENE_INIT;
+			m_resultcount = 0;
+			Ret = 1;
+			break;
+		
 	}
 	return Ret;
 }
@@ -60,6 +71,7 @@ void ResultScene::Draw()
 	case RESULT_SCENE_INIT:
 	case RESULT_SCENE_LOAD:
 	case RESULT_SCENE_LOOP:
+	case RESULT_SCENE_ENDWAIT:
 	case RESULT_SCENE_END:
 		if (m_resultcount == 0) {
 			DrawRotaGraph(1600 / 2, 900 / 2, 1.0f, 0.0f, m_hndl, TRUE);

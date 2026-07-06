@@ -9,6 +9,7 @@
 #include"../../Enemy/EnemyManager.h"
 #include"../../BackGround/BackGround.h"
 #include"../../Life/Life.h"
+#include"../Choice/ChoiceScene.h"
 class Play
 {
 private:
@@ -18,6 +19,7 @@ private:
 		PLAY_SCENE_LOOP,
 		PLAY_SCENE_END,
 		PLAY_SCENE_ENDWAIT,
+		
 
 		PLAY_SCENE_NUM,
 
@@ -40,7 +42,7 @@ public:
 
 	void InitScene();
 	//ŒJ‚è•Ô‚µs‚¤ˆ—
-	int Loop();
+	int Loop(ChoiceScene choice);
 	//•`‰æˆ—
 	void Draw();
 
@@ -55,6 +57,12 @@ private:
 	void Load();
 	//–ˆƒtƒŒ[ƒ€ŒÄ‚Ôˆ—
 	void Step();
+	void Step2();
+	void Step3();
+	void Step4();
+	void Step5();
+	void Step6();
+	void Step7();
 
 
 };

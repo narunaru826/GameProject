@@ -1,5 +1,5 @@
 #pragma once
-
+#include<DxLib.h>
 
 class TitleScene
 {
@@ -9,6 +9,7 @@ private:
 		TITLE_SCENE_LOAD,
 		TITLE_SCENE_LOOP,
 		TITLE_SCENE_END,
+		TITLE_SCENE_ENDWAIT,
 
 		TITLE_SCENE_NUM,
 

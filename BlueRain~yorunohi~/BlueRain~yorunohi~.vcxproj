@@ -137,11 +137,14 @@
     <ClInclude Include="src\Game\Enemy\Enemy2.h" />
     <ClInclude Include="src\Game\Enemy\Enemy3.h" />
     <ClInclude Include="src\Game\Enemy\EnemyManager.h" />
+    <ClInclude Include="src\Game\Enemy\Mob1.h" />
     <ClInclude Include="src\Game\Life\Life.h" />
     <ClInclude Include="src\Game\Object\Object.h" />
     <ClInclude Include="src\Game\player\Player.h" />
+    <ClInclude Include="src\Game\Scene\Choice\ChoiceScene.h" />
     <ClInclude Include="src\Game\Scene\GameOver\GameOver.h" />
     <ClInclude Include="src\Game\Scene\Play\Play.h" />
+    <ClInclude Include="src\Game\Scene\Play\Stage2.h" />
     <ClInclude Include="src\Game\Scene\Result\Result.h" />
     <ClInclude Include="src\Game\Scene\SceneManager\SceneManager.h" />
     <ClInclude Include="src\Game\Scene\Title\Title.h" />
@@ -154,6 +157,7 @@
     <ClInclude Include="src\Lib\Fade\Fade.h" />
     <ClInclude Include="src\Lib\Input\Input.h" />
     <ClInclude Include="src\Lib\MyMath\MyMath.h" />
+    <ClInclude Include="src\Lib\Process\Process.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game\BackGround\BackGround.cpp" />
@@ -163,12 +167,15 @@
     <ClCompile Include="src\Game\Enemy\Enemy2.cpp" />
     <ClCompile Include="src\Game\Enemy\Enemy3.cpp" />
     <ClCompile Include="src\Game\Enemy\EnemyManager.cpp" />
+    <ClCompile Include="src\Game\Enemy\Mob1.cpp" />
     <ClCompile Include="src\Game\Life\Life.cpp" />
     <ClCompile Include="src\Game\main.cpp" />
     <ClCompile Include="src\Game\Object\Object.cpp" />
     <ClCompile Include="src\Game\player\Player.cpp" />
+    <ClCompile Include="src\Game\Scene\Choice\ChoiceScene.cpp" />
     <ClCompile Include="src\Game\Scene\GameOver\GameOver.cpp" />
     <ClCompile Include="src\Game\Scene\Play\Play.cpp" />
+    <ClCompile Include="src\Game\Scene\Play\Stage2.cpp" />
     <ClCompile Include="src\Game\Scene\Result\Result.cpp" />
     <ClCompile Include="src\Game\Scene\SceneManager\SceneManager.cpp" />
     <ClCompile Include="src\Game\Scene\Title\Title.cpp" />
@@ -180,6 +187,7 @@
     <ClCompile Include="src\Lib\Fade\Fade.cpp" />
     <ClCompile Include="src\Lib\Input\Input.cpp" />
     <ClCompile Include="src\Lib\MyMath\MyMath.cpp" />
+    <ClCompile Include="src\Lib\Process\Process.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

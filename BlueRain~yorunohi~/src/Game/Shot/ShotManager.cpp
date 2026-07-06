@@ -115,7 +115,7 @@ void ShotManager::Step(Player &player)
 			allfalse = false;
 			
 		}
-		if (m_count > 137)
+		if (m_count >= 138)
 		{
 			m_EnemyShot[i].Step(player);
 		}
@@ -159,6 +159,7 @@ void ShotManager::Draw()
 		m_BossShot[i].Draw();
 
 	}
+	DrawFormatString(20, 20, GetColor(255, 0, 0), "íeÇ™î≠éÀÇ≥ÇÍÇΩêî:%d", m_count);
 }
 
 
@@ -233,8 +234,8 @@ void ShotManager::RequestBossShot(const VECTOR& Pos, const VECTOR& Speed)
 	VECTOR Spd;
 
 	
-	Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 8;
-	Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 8;
+	Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 6;
+	Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 6;
 	rad += 60;
 	radi += 50;
 	count++;

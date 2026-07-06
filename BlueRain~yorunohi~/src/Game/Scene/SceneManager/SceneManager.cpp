@@ -37,19 +37,22 @@ int SceneManager::Loop()
 	{
 	case SCENE_TITLE:
 		if (TitleScene.Loop() != 0) {
-			m_SceneID = SCENE_WAVE1;
+			m_SceneID = SCENE_CHOICE;
 		}
 
 		break;
 
-	case SCENE_COMMENT:
-		/*if (CommentScene.Loop() != 0) {
-			m_SceneID = SCENE_WAVE1;
-		}*/
+	case SCENE_CHOICE:
+		if (m_choice.Loop() != 0) {
+			
+			m_SceneID = SCENE_STAGE1;
+			
+			
+		}
 		break;
-	case SCENE_WAVE1:
+	case SCENE_STAGE1:
 		//SetMousePoint(SCREEN_HALF_SIZE_X, SCREEN_HALF_SIZE_Y);
-		if (Play.Loop() != 0)
+		if (Play.Loop(m_choice) != 0)
 		{
 			if (Play.Flg()) {
 				m_SceneID = SCENE_RESULT;
@@ -62,17 +65,7 @@ int SceneManager::Loop()
 
 
 		break;
-	case SCENE_WAVE2:
-
-
-		break;
-	case SCENE_WAVE3:
-		m_SceneID = SCENE_WAVE4;
-		break;
-	case SCENE_WAVE4:
-		m_SceneID = SCENE_RESULT;
-
-		break;
+	
 	case SCENE_RESULT:
 		//SoundManager::Stop(SoundManager::SOUNDID_BGM);
 		if (ResultScene.Loop() != 0) {
@@ -98,15 +91,13 @@ void SceneManager::Draw()
 	case SCENE_TITLE:
 		TitleScene.Draw();
 		break;
-	case SCENE_COMMENT:
-		//CommentScene.Draw();
+	case SCENE_CHOICE:
+		m_choice.Draw();
 		break;
-	case SCENE_WAVE1:
+	case SCENE_STAGE1:
 		Play.Draw();
 		break;
-	case SCENE_WAVE2:
-
-		break;
+	
 	case SCENE_RESULT:
 		ResultScene.Draw();
 		break;

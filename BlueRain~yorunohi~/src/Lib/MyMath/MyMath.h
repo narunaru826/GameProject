@@ -7,6 +7,7 @@ int Gcd(int a, int b);
 //ハート状の弾
 float HeartFunc(float x);
 
+float QuadraticFunc(float x);
 //数学的座標へ変換(ハート用
-int ConvertX(float x);
-int ConvertY(float y);
+int ConvertX(float x,float size);
+int ConvertY(float y,float size);

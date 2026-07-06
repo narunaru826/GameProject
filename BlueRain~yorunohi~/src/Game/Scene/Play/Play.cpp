@@ -28,7 +28,7 @@ void Play::InitScene()
 	
 
 }
-int Play::Loop()
+int Play::Loop(ChoiceScene choice)
 {
 	int Ret = 0;
 	//ひとまずswitch分を利用
@@ -44,58 +44,70 @@ int Play::Loop()
 	case PLAY_SCENE_LOAD:
 		CFade::RequestFadeIn();
 		Load();
-		
 		m_SceneID = PLAY_SCENE_LOOP;
 		
 		break;
 	case PLAY_SCENE_LOOP:
 		if (CFade::IsEndFadeIn(CFade::GetFadeId())) {
-			Step();
+			if (choice.GetStagenum() == 1) {
+				Step();
+				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY1);
+			}
+			if (choice.GetStagenum() == 2) {
+				Step2();
+				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY2);
+			}
+			if (choice.GetStagenum() == 3) {
+				Step3();
+				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY3);
+			}
+			if (choice.GetStagenum() == 4) {
+				Step4();
+				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY4);
+			}
+			if (choice.GetStagenum() == 5) {
+				Step5();
+				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY5);
+			}
+			if (choice.GetStagenum() == 6) {
+				Step6();
+				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY6);
+			}
+			if (choice.GetStagenum() == 7) {
+				Step7();
+				m_EnemyManager.SetEnemyState(EnemyManager::BOSS);
+			}
 			
 			if (CollisionManager::CheckHitPlayerToEnemy(m_Player, m_EnemyManager) == true
 				|| CollisionManager::CheckHitPlayerToEnemy1Shot(m_Player, m_ShotManager) == true
 				|| CollisionManager::CheckHitPlayerToBoss1Shot(m_Player, m_ShotManager)
 				|| CollisionManager::CheckHitPlayerShotToBoss1(m_ShotManager, m_EnemyManager))
 			{
+				CFade::RequestFadeOut();
 				m_SceneID = PLAY_SCENE_ENDWAIT;
 			}
 			if (CheckHitKey(KEY_INPUT_X)) {
+				CFade::RequestFadeOut();
 				flg = true;
 				m_SceneID = PLAY_SCENE_ENDWAIT;
 			}
-			/*if (IsInputTrg(KEY_INPUT_C)) {
-				flg = false;
-				m_SceneID = PLAY_SCENE_ENDWAIT;
-			}*/
-
-
-
-			/*if (time.IsTimeUp())
-			{
-				flg = true;
-				endcount = 30;
-				m_SceneID = PLAY_SCENE_ENDWAIT;
-			}*/
+			
 		}
 		break;
+	
 	case PLAY_SCENE_ENDWAIT:
-		Step();
-		
-		
-		m_SceneID = PLAY_SCENE_END;
-		
+		if (CFade::IsEndFadeOut(CFade::GetFadeId())) {
+			m_SceneID = PLAY_SCENE_END;
+		}
 		break;
 	case PLAY_SCENE_END:
 		Exit();
+		
+			
 		m_SceneID = PLAY_SCENE_INIT;
-
 		Ret = 1;
-
-
-
-
 		break;
-
+		
 	}
 
 
@@ -106,18 +118,25 @@ int Play::Loop()
 //更新処理
 void Play::Draw()
 {
-	if (m_SceneID != PLAY_SCENE_LOOP)return;
+	//if (m_SceneID != PLAY_SCENE_LOOP)return;
+	switch (m_SceneID) {
+	case PLAY_SCENE_INIT:
+	case PLAY_SCENE_LOAD:
+	case PLAY_SCENE_LOOP:
+	case PLAY_SCENE_ENDWAIT:
+	case PLAY_SCENE_END:
+		m_BackGround.Draw();
+		m_Player.Draw();
+		m_ShotManager.Draw();
+		/*m_Enemy1.Draw();
+		m_Enemy2.Draw();
+		m_Enemy3.Draw();*/
+		m_EnemyManager.Draw();
 
-	m_BackGround.Draw();
-	m_Player.Draw();
-	m_ShotManager.Draw();
-	/*m_Enemy1.Draw();
-	m_Enemy2.Draw();
-	m_Enemy3.Draw();*/
-	m_EnemyManager.Draw();
-	
-	m_life.Draw(m_Player);
-	DrawFormatString(640, 360, GetColor(255, 0, 0), "プレイ");
+		m_life.Draw(m_Player);
+		DrawFormatString(640, 360, GetColor(255, 0, 0), "プレイ");
+		break;
+	}
 }
 
 //初期化
@@ -150,6 +169,14 @@ void Play::Load()
 	m_life.Load();
 }
 
+
+
+bool Play::Flg()
+{
+	return flg;
+}
+
+
 //毎フレーム呼ぶ処理
 void Play::Step()
 {
@@ -160,11 +187,90 @@ void Play::Step()
 	/*m_Enemy1.Step(m_ShotManager, m_Player);
 	m_Enemy2.Step(m_ShotManager, m_Player);
 	m_Enemy3.Step(m_ShotManager,m_Player);*/
-	m_EnemyManager.Step(m_Player,m_ShotManager);
+	m_EnemyManager.Step(m_Player, m_ShotManager);
 	m_life.Step();
 }
 
-bool Play::Flg()
+//毎フレーム呼ぶ処理
+void Play::Step2()
 {
-	return flg;
+	m_BackGround.Step();
+	m_Player.Step(/*m_ShotManager*/);
+	m_ShotManager.Step(m_Player);
+
+	/*m_Enemy1.Step(m_ShotManager, m_Player);
+	m_Enemy2.Step(m_ShotManager, m_Player);
+	m_Enemy3.Step(m_ShotManager,m_Player);*/
+	m_EnemyManager.Step(m_Player, m_ShotManager);
+	m_life.Step();
+}
+
+//毎フレーム呼ぶ処理
+void Play::Step3()
+{
+	m_BackGround.Step();
+	m_Player.Step(/*m_ShotManager*/);
+	m_ShotManager.Step(m_Player);
+
+	/*m_Enemy1.Step(m_ShotManager, m_Player);
+	m_Enemy2.Step(m_ShotManager, m_Player);
+	m_Enemy3.Step(m_ShotManager,m_Player);*/
+	m_EnemyManager.Step(m_Player, m_ShotManager);
+	m_life.Step();
+}
+
+//毎フレーム呼ぶ処理
+void Play::Step4()
+{
+	m_BackGround.Step();
+	m_Player.Step(/*m_ShotManager*/);
+	m_ShotManager.Step(m_Player);
+
+	/*m_Enemy1.Step(m_ShotManager, m_Player);
+	m_Enemy2.Step(m_ShotManager, m_Player);
+	m_Enemy3.Step(m_ShotManager,m_Player);*/
+	m_EnemyManager.Step(m_Player, m_ShotManager);
+	m_life.Step();
+}
+
+//毎フレーム呼ぶ処理
+void Play::Step5()
+{
+	m_BackGround.Step();
+	m_Player.Step(/*m_ShotManager*/);
+	m_ShotManager.Step(m_Player);
+
+	/*m_Enemy1.Step(m_ShotManager, m_Player);
+	m_Enemy2.Step(m_ShotManager, m_Player);
+	m_Enemy3.Step(m_ShotManager,m_Player);*/
+	m_EnemyManager.Step(m_Player, m_ShotManager);
+	m_life.Step();
+}
+
+//毎フレーム呼ぶ処理
+void Play::Step6()
+{
+	m_BackGround.Step();
+	m_Player.Step(/*m_ShotManager*/);
+	m_ShotManager.Step(m_Player);
+
+	/*m_Enemy1.Step(m_ShotManager, m_Player);
+	m_Enemy2.Step(m_ShotManager, m_Player);
+	m_Enemy3.Step(m_ShotManager,m_Player);*/
+	m_EnemyManager.Step(m_Player, m_ShotManager);
+	m_life.Step();
+}
+
+//毎フレーム呼ぶ処理
+void Play::Step7()
+{
+	m_BackGround.Step();
+	m_Player.Step(/*m_ShotManager*/);
+	m_ShotManager.Step(m_Player);
+
+	/*m_Enemy1.Step(m_ShotManager, m_Player);
+	m_Enemy2.Step(m_ShotManager, m_Player);
+	m_Enemy3.Step(m_ShotManager,m_Player);*/
+	m_EnemyManager.Step(m_Player, m_ShotManager);
+	m_life.Step();
 }

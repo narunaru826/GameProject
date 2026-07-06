@@ -1,6 +1,8 @@
 #include"EnemyManager.h"
 #include"../../Lib/Common.h"
 #include<math.h>
+#include"../../Lib/MyMath/MyMath.h"
+#include<cmath>
 
 
 EnemyManager::EnemyManager()
@@ -45,6 +47,10 @@ void EnemyManager::Init()
 	for (int i = 0; i < ENEMY_NUM; i++)
 	{
 		m_Boss1[i].Init();
+	}
+	for (int i = 0; i < MOB_NUM; i++)
+	{
+		m_mob1[i].Init();
 	}
 	m_waitcount = 0;
 	m_waitcount2 = 0;
@@ -104,7 +110,10 @@ void EnemyManager::Load()
 	{
 		m_Boss1[i].Load();
 	}
-
+	for (int i = 0; i < MOB_NUM; i++)
+	{
+		m_mob1[i].Load();
+	}
 
 }
 
@@ -127,17 +136,90 @@ void EnemyManager::Exit()
 	{
 		m_Boss1[i].Exit();
 	}
+	for (int i = 0; i < MOB_NUM; i++)
+	{
+		m_mob1[i].Exit();
+	}
 }
 
 
 void EnemyManager::Step(Player &player ,ShotManager &shotManager)
 {
-	for (int i = 0; i < ENEMY_NUM; i++)
+	int enemyNum1 = 0;
+	int enemyNum2 = 0;
+	switch (m_enemy)
 	{
+	case ENEMY1:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
 
-		m_Enemy[i].Step(shotManager,player);
+			m_Enemy[i].Step(shotManager, player);
+		}
+		break;
+	case ENEMY2:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+
+			m_Enemy2[i].Step(shotManager, player);
+		}
+		break;
+	case ENEMY3:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+
+			m_Enemy3[i].Step(shotManager, player);
+		}
+		break;
+	case ENEMY4:
+		for (int i = 0; i < MOB_NUM; i++)
+		{
+
+			m_mob1[i].Step(shotManager, player);
+			if (m_mob1[i].IsActive())
+			{
+				enemyNum1++;
+			}
+			m_waitcount--;
+			if (m_waitcount <= 0 || enemyNum1 == 0)
+			{
+				m_count++;
+				Mob1Request();
+				m_waitcount = 40;
+			}
+		}
+		break;
+	case ENEMY5:
+		
+		break;
+	case ENEMY6:
+
+		break;
+	case ENEMY7:
+
+		break;
+	case ENEMY8:
+
+		break;
+	case ENEMY9:
+
+		break;
+	case BOSS:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+			m_Boss1[i].Step(shotManager, player);
+			if (m_Boss1[i].IsActive())
+			{
+				enemyNum2++;
+			}
+		}
+		if (enemyNum2 == 0)
+		{
+			Boss1Request();
+		}
+		break;
 	}
-	for (int i = 0; i < ENEMY_NUM; i++)
+	
+	/*for (int i = 0; i < ENEMY_NUM; i++)
 	{
 		m_Enemy2[i].Step(shotManager, player);
 	}
@@ -148,7 +230,15 @@ void EnemyManager::Step(Player &player ,ShotManager &shotManager)
 	for (int i = 0; i < ENEMY_NUM; i++)
 	{
 		m_Boss1[i].Step(shotManager, player);
-	}
+		if (m_Boss1[i].IsActive())
+		{
+			enemyNum2++;
+		}
+	}*/
+	
+	
+	
+	
 }
 //•`‰æ
 void EnemyManager::Draw()
@@ -158,17 +248,55 @@ void EnemyManager::Draw()
 
 		m_Enemy[i].Draw();
 	}
-	for (int i = 0; i < ENEMY_NUM; i++)
+	/*for (int i = 0; i < ENEMY_NUM; i++)
 	{
 		m_Enemy2[i].Draw();
 	}
 	for (int i = 0; i < ENEMY_NUM; i++)
 	{
 		m_Enemy3[i].Draw();
-	}
+	}*/
 	for (int i = 0; i < ENEMY_NUM; i++)
 	{
 		m_Boss1[i].Draw();
 	}
+	for (int i = 0; i < MOB_NUM; i++)
+	{
+		m_mob1[i].Draw();
+	}
+	DrawFormatString(20, 80, GetColor(255, 0, 0), "“G¶¬:%d", m_count);
 }
 
+void EnemyManager::Mob1Request()
+{
+	float x = -4.5f;
+	float y = 0.0f;
+	VECTOR Pos;
+	VECTOR Spd = VGet(0.0f,0.0f,0.0f);
+	Pos.x = -100;
+	Pos.y = 0;
+	Pos.z = 0.0f;
+	for (int i = 0; i < MOB_NUM; i++)
+	{
+		if (m_mob1[i].Request(Pos, Spd,x,y))
+		{
+			break;
+		}
+	}
+}
+
+void EnemyManager::Boss1Request()
+{
+	VECTOR Pos;
+	VECTOR Spd = VGet(0.0f, 0.0f, 0.0f);
+	Pos.x = WINDOW_SENTER_X - 300;
+	Pos.y = WINDOW_SENTER_Y - 300;
+	Pos.z = 0.0f;
+	for (int i = 0; i < MOB_NUM; i++)
+	{
+		if (m_Boss1[i].Request(Pos, Spd))
+		{
+			break;
+		}
+	}
+}

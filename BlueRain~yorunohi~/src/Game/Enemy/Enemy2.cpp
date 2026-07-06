@@ -153,8 +153,8 @@ void Enemy2::Step(ShotManager& shotmanager, Player& player)
 	{
 		x = -6.0f;
 	}*/
-	m_Pos.x = ConvertX(x);
-	m_Pos.y = ConvertY(y);
+	m_Pos.x = ConvertX(x,50);
+	m_Pos.y = ConvertY(y,50);
 	//===================================================
 	//’e‚Ìˆ—
 	m_shotwait--;

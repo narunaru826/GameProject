@@ -1,5 +1,8 @@
 #include"Collision.h"
 #include"../../Lib/collision/col.h"
+
+#define PLAYER_RADI (3.0f)
+#define ENEMYSHOT__RADI (3.0f)
 bool CollisionManager::CheckHitPlayerToEnemy(Player& player, EnemyManager& enemymanager)
 {
 	for (int i = 0; i < ENEMY_NUM; i++) {
@@ -48,9 +51,9 @@ bool CollisionManager::CheckHitPlayerToEnemy1Shot(Player& player, ShotManager& s
 		PlayerPos = player.GetPosition();
 		EnemyShot.GetPosition(EnemyShotPos);
 
-		PlayerRadi = 5.0f;
+		PlayerRadi = PLAYER_RADI;
 		EnemyShotRadi = 6.0f;
-		if (player.GetInviCount() < 0) {
+		if (player.GetInviCount() <= 0) {
 			if (Collision::CheckHitSphereToSphere(PlayerPos, PlayerRadi, EnemyShotPos, EnemyShotRadi))
 			{
 				if (!player.Hit())
@@ -85,8 +88,8 @@ bool CollisionManager::CheckHitPlayerToBoss1Shot(Player& player, ShotManager& sh
 		PlayerPos = player.GetPosition();
 		Boss1Shot.GetPosition(Boss1ShotPos);
 
-		PlayerRadi = 5.0f;
-		Boss1ShotRadi = 10.0f;
+		PlayerRadi = PLAYER_RADI;
+		Boss1ShotRadi = 7.0f;
 		
 		if (player.GetInviCount() <= 0) {
 			if (Collision::CheckHitSphereToSphere(PlayerPos, PlayerRadi, Boss1ShotPos, Boss1ShotRadi))
@@ -133,7 +136,10 @@ bool CollisionManager::CheckHitPlayerShotToBoss1(ShotManager& shotmanager, Enemy
 
 			PlayerShotRadi = 6.0f;
 			Boss1Radi = 40.0f;
-			
+			if (boss1.GetKillflg())
+			{
+				return true;
+			}
 			if (Collision::CheckHitSphereToSphere(PlayerShotPos, PlayerShotRadi, Boss1Pos, Boss1Radi))
 			{
 				Plshot.Hit();
@@ -143,6 +149,7 @@ bool CollisionManager::CheckHitPlayerShotToBoss1(ShotManager& shotmanager, Enemy
 				}
 				else
 				{
+					
 					return true;
 				}
 				

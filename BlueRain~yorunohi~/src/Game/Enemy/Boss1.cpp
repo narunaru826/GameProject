@@ -10,7 +10,7 @@ static const int ROOT_ID[] = { 1,2,3,4,5 };
 static const int ROOT_NUM = 5;
 
 
-#define SHOTWAIT (1)
+#define SHOTWAIT (0)
 //コンストラクタ
 Boss1::Boss1()
 {
@@ -23,7 +23,7 @@ Boss1::Boss1()
 	m_EnemyLife = ENEMYLIFE;
 
 
-
+	
 	m_Scale = VGet(10.0f, 10.0f, 10.0f);
 
 	m_enemyKillcount = 0;
@@ -50,7 +50,7 @@ void Boss1::Init()
 	//memset(&m_Pos, 0, sizeof(m_Pos));
 	memset(&m_Speed, 0, sizeof(m_Speed));
 
-	m_isActive = true;
+	m_isActive = false;
 	m_hndl = -1;
 	m_Radius = RADIUS;
 	m_EnemyLife = ENEMYLIFE;
@@ -84,6 +84,8 @@ void Boss1::Init()
 	m_RequestPostionState = 0;
 
 	m_wait = 60;
+	m_bosskillwait = 60;
+	m_bosskillflg = false;
 }
 
 //ロード
@@ -157,35 +159,37 @@ void Boss1::Step(ShotManager& shotmanager, Player& player)
 
 	
 	//第一ウェーブ======================================
-	if (m_EnemyLife > 2500) {//2501まではこの処理
-		m_shotwait--;
-		if (m_shotwait < 0) {
-			shotmanager.RequestBossShot(m_Pos, m_Speed);
-			m_shotwait = SHOTWAIT;
-		}
-	}
-	//第2ウェーブ
-	if (m_EnemyLife <= 2500 && m_EnemyLife > 1500)
-	{
-		m_wait--;
-		if (m_wait < 0) {
+	if (m_isActive) {
+		if (m_EnemyLife > 2500) {//2501まではこの処理
 			m_shotwait--;
 			if (m_shotwait < 0) {
-				shotmanager.RequestBossShot2(m_Pos, m_Speed);
-
+				shotmanager.RequestBossShot(m_Pos, m_Speed);
 				m_shotwait = SHOTWAIT;
 			}
 		}
-	}
-	if (m_EnemyLife <= 1500)
-	{
-		m_shotwait--;
-		if (m_shotwait < 0) {
-			shotmanager.RequestBossShot(m_Pos, m_Speed);
-			shotmanager.RequestBossShot2(m_Pos, m_Speed);
-			shotmanager.RequestBossShot3(m_Pos, m_Speed);
+		//第2ウェーブ
+		if (m_EnemyLife <= 2500 && m_EnemyLife > 1500)
+		{
+			m_wait--;
+			if (m_wait < 0) {
+				m_shotwait--;
+				if (m_shotwait < 0) {
+					shotmanager.RequestBossShot2(m_Pos, m_Speed);
 
-			m_shotwait = SHOTWAIT;
+					m_shotwait = SHOTWAIT;
+				}
+			}
+		}
+		if (m_EnemyLife <= 1500)
+		{
+			m_shotwait--;
+			if (m_shotwait < 0) {
+				shotmanager.RequestBossShot(m_Pos, m_Speed);
+				shotmanager.RequestBossShot2(m_Pos, m_Speed);
+				shotmanager.RequestBossShot3(m_Pos, m_Speed);
+
+				m_shotwait = SHOTWAIT;
+			}
 		}
 	}
 	//===================================================
@@ -197,7 +201,12 @@ void Boss1::Step(ShotManager& shotmanager, Player& player)
 	{
 		m_isActive = false;
 	}
-
+	if (!m_isActive) {
+		if (m_bosskillwait < 0)
+		{
+			m_bosskillflg = true;;
+		}
+	}
 }
 
 bool Boss1::Hit(int Damage)
@@ -207,9 +216,11 @@ bool Boss1::Hit(int Damage)
 		m_isActive = false;
 
 		//m_EnemyLife = ENEMYLIFE;
-
-
+		m_bosskillwait--;
+		
 		return true;
+		
+		
 	}
 	return false;
 }

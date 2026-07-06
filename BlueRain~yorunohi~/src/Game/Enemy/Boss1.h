@@ -4,6 +4,9 @@
 #include"../Enemy/Enemy1.h"
 #include"../Shot/ShotManager.h"
 #include"../player/Player.h"
+#include"../Scene/Choice/ChoiceScene.h"
+
+
 class Boss1 : public Object
 {
 	float x;
@@ -19,7 +22,8 @@ class Boss1 : public Object
 
 	int m_RequestPostionState;
 	int m_wait;
-
+	int m_bosskillwait;
+	bool m_bosskillflg;
 public:
 	//コンストラクタ・デストラクタ
 	Boss1();
@@ -32,7 +36,7 @@ public:
 	//終了
 	void Exit();
 	//毎フレーム処理
-	void Step(ShotManager& shotmanager, Player& player );
+	void Step(ShotManager& shotmanager, Player& player);
 
 	//描画
 	void Draw();
@@ -45,6 +49,10 @@ public:
 	bool Hit(int Damage);
 
 
+	bool GetKillflg()
+	{
+		return m_bosskillflg;
+	}
 
 
 

@@ -1,6 +1,6 @@
 #include <memory>
 #include <DxLib.h>
-
+#include"../Lib/Process/Process.h"
 
 
 #include"../Game/Scene/SceneManager/SceneManager.h"
@@ -25,6 +25,7 @@ int  WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	// スクリーン設定
 	ChangeWindowMode(TRUE);			// フルスクリーンorウィンドウモード
 	SetGraphMode(WINDOW_SIZE_X, WINDOW_SIZE_Y, 32);	// ウィンドウのサイズ
+	SetDoubleStartValidFlag(TRUE);
 
 #ifndef _DEBUG
 	// リリース版はログを出さない
@@ -50,7 +51,7 @@ int  WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 
 
-
+	
 
 
 	//ゲームメインループ
