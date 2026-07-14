@@ -150,9 +150,23 @@ void EnemyManager::Step(Player &player ,ShotManager &shotManager)
 	switch (m_enemy)
 	{
 	case ENEMY1:
+		
 		for (int i = 0; i < ENEMY_NUM; i++)
 		{
-
+			m_Boss1[i].SetEnemyState(Boss1::ENEMY1);
+			m_Boss1[i].Step(shotManager, player, m_Enemy[i]);
+			if (m_Boss1[i].IsActive())
+			{
+				enemyNum2++;
+			}
+		}
+		if (enemyNum2 == 0)
+		{
+			Boss1Request();
+		}
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+			
 			m_Enemy[i].Step(shotManager, player);
 		}
 		break;
@@ -206,7 +220,8 @@ void EnemyManager::Step(Player &player ,ShotManager &shotManager)
 	case BOSS:
 		for (int i = 0; i < ENEMY_NUM; i++)
 		{
-			m_Boss1[i].Step(shotManager, player);
+			m_Boss1[i].SetEnemyState(Boss1::BOSS);
+			m_Boss1[i].Step(shotManager, player,m_Enemy[i]);
 			if (m_Boss1[i].IsActive())
 			{
 				enemyNum2++;
@@ -243,27 +258,69 @@ void EnemyManager::Step(Player &player ,ShotManager &shotManager)
 //•`‰æ
 void EnemyManager::Draw()
 {
-	for (int i = 0; i < ENEMY_NUM; i++)
+	switch (m_enemy)
 	{
+	case ENEMY1:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
 
-		m_Enemy[i].Draw();
+			m_Enemy[i].Draw();
+		}
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+			m_Boss1[i].Draw();
+
+		}
+
+		break;
+	case ENEMY2:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+
+			m_Enemy2[i].Draw();
+		}
+		break;
+	case ENEMY3:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+
+			m_Enemy3[i].Draw();
+		}
+		break;
+	case ENEMY4:
+		for (int i = 0; i < MOB_NUM; i++)
+		{
+
+			m_mob1[i].Draw();
+			
+			
+		}
+		break;
+	case ENEMY5:
+
+		break;
+	case ENEMY6:
+
+		break;
+	case ENEMY7:
+
+		break;
+	case ENEMY8:
+
+		break;
+	case ENEMY9:
+
+		break;
+	case BOSS:
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+			m_Boss1[i].Draw();
+			
+		}
+		
+		break;
 	}
-	/*for (int i = 0; i < ENEMY_NUM; i++)
-	{
-		m_Enemy2[i].Draw();
-	}
-	for (int i = 0; i < ENEMY_NUM; i++)
-	{
-		m_Enemy3[i].Draw();
-	}*/
-	for (int i = 0; i < ENEMY_NUM; i++)
-	{
-		m_Boss1[i].Draw();
-	}
-	for (int i = 0; i < MOB_NUM; i++)
-	{
-		m_mob1[i].Draw();
-	}
+
 	DrawFormatString(20, 80, GetColor(255, 0, 0), "“G¶¬:%d", m_count);
 }
 

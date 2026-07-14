@@ -148,7 +148,7 @@ bool Boss1::Request(const VECTOR& pos, const VECTOR& speed)
 
 
 //毎フレーム
-void Boss1::Step(ShotManager& shotmanager, Player& player)
+void Boss1::Step(ShotManager& shotmanager, Player& player, Enemy1& enemy1)
 {
 	//生存フラグオフの場合は終了
 	if (!m_isActive)
@@ -156,41 +156,59 @@ void Boss1::Step(ShotManager& shotmanager, Player& player)
 		
 	}
 
-
+	int mm;
 	
 	//第一ウェーブ======================================
-	if (m_isActive) {
-		if (m_EnemyLife > 2500) {//2501まではこの処理
-			m_shotwait--;
-			if (m_shotwait < 0) {
-				shotmanager.RequestBossShot(m_Pos, m_Speed);
-				m_shotwait = SHOTWAIT;
-			}
-		}
-		//第2ウェーブ
-		if (m_EnemyLife <= 2500 && m_EnemyLife > 1500)
-		{
-			m_wait--;
-			if (m_wait < 0) {
+	switch (m_enemy) {
+	case ENEMY1:
+		
+		break;
+	case ENEMY2:
+		break;
+	case ENEMY3:
+		break;
+	case ENEMY4:
+		break;
+	case ENEMY5:
+		break;
+	case ENEMY6:
+		break;
+	case BOSS:
+		
+		if (m_isActive) {
+			if (m_EnemyLife > 2500) {//2501まではこの処理
 				m_shotwait--;
 				if (m_shotwait < 0) {
+					shotmanager.RequestBossShot(m_Pos, m_Speed);
+					m_shotwait = SHOTWAIT;
+				}
+			}
+			//第2ウェーブ
+			if (m_EnemyLife <= 2500 && m_EnemyLife > 1500)
+			{
+				m_wait--;
+				if (m_wait < 0) {
+					m_shotwait--;
+					if (m_shotwait < 0) {
+						shotmanager.RequestBossShot2(m_Pos, m_Speed);
+
+						m_shotwait = SHOTWAIT;
+					}
+				}
+			}
+			if (m_EnemyLife <= 1500)
+			{
+				m_shotwait--;
+				if (m_shotwait < 0) {
+					shotmanager.RequestBossShot(m_Pos, m_Speed);
 					shotmanager.RequestBossShot2(m_Pos, m_Speed);
+					shotmanager.RequestBossShot3(m_Pos, m_Speed);
 
 					m_shotwait = SHOTWAIT;
 				}
 			}
 		}
-		if (m_EnemyLife <= 1500)
-		{
-			m_shotwait--;
-			if (m_shotwait < 0) {
-				shotmanager.RequestBossShot(m_Pos, m_Speed);
-				shotmanager.RequestBossShot2(m_Pos, m_Speed);
-				shotmanager.RequestBossShot3(m_Pos, m_Speed);
-
-				m_shotwait = SHOTWAIT;
-			}
-		}
+		break;
 	}
 	//===================================================
 	

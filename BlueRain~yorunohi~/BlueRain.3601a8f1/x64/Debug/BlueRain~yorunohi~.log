@@ -1,3 +1,2 @@
-﻿  ShotManager.cpp
-C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\ShotManager.cpp(128,11): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+﻿  EnemyManager.cpp
   BlueRain~yorunohi~.vcxproj -> C:\Users\2409402\Desktop\BlueRain~yorunohi~\x64\Debug\BlueRain~yorunohi~.exe

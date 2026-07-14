@@ -6,6 +6,7 @@
 #include"../../Enemy/Enemy2.h"
 #include"../../Enemy/Enemy3.h"
 #include"../../Enemy/Boss1.h"
+#include"../../Object/Object.h"
 #include"../../Enemy/EnemyManager.h"
 #include"../../BackGround/BackGround.h"
 #include"../../Life/Life.h"
@@ -25,6 +26,7 @@ private:
 
 	};
 	bool flg;
+	Object m_obj;
 	Player m_Player;
 	ShotManager m_ShotManager;
 	Enemy1 m_Enemy1;

@@ -14,7 +14,7 @@ static const int ENEMY_NUM = 1;
 static const int MOB_NUM = 5;
 static const int ENEMYBOSS_NUM = 1500;
 
-class EnemyManager
+class EnemyManager:public Object
 {
 private:
 	Boss1 m_Boss1[ENEMY_NUM];
@@ -52,7 +52,7 @@ public:
 	~EnemyManager();
 
 
-	enum tagEnemy
+	/*enum tagEnemy
 	{
 		ENEMY1,
 		ENEMY2,
@@ -64,7 +64,7 @@ public:
 		ENEMY8,
 		ENEMY9,
 		BOSS
-	};
+	};*/
 	//‰Šú‰»
 	void Init();
 	//ƒ[ƒh
@@ -112,11 +112,16 @@ public:
 		return m_count;
 	}
 private:
-	tagEnemy m_enemy;
+	//tagEnemy m_enemy;
 
 public:
-	void SetEnemyState(tagEnemy enemy)
+	/*void SetEnemyState(tagEnemy enemy)
 	{
 		m_enemy = enemy;
 	}
+
+	tagEnemy GetEnemyState()
+	{
+		return m_enemy;
+	}*/
 };

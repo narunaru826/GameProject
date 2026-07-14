@@ -18,12 +18,18 @@ class Enemy1 : public Object
 
 	int m_RequestPostionState;
 
-
+	
 public:
 	//コンストラクタ・デストラクタ
 	Enemy1();
 	~Enemy1();
-
+	enum TagEnemy1Move
+	{
+		CENTER,
+		RIGHT,
+		LEFT
+	};
+	TagEnemy1Move enemy1move;
 	//初期化
 	void Init();
 	//ロード
@@ -40,7 +46,20 @@ public:
 	bool Request(const VECTOR& pos, const VECTOR& speed);
 
 
+	int GetRequestCount()
+	{
+		return m_RequestCount;
+	}
 
+	int GetRequestPostionState()
+	{
+		return m_RequestPostionState;
+	}
+
+	TagEnemy1Move GetEnemy1Move()
+	{
+		return enemy1move;
+	}
 	//bool Hit(int Damage, Point& Point);
 
 	

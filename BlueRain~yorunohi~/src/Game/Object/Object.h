@@ -23,6 +23,7 @@ protected:
 
 		ENEMY_STATE_NUM,//ó‘Ô‚Ì‘”
 	};
+	
 	typedef struct
 	{
 		float frame;		//Ä¶’†‚ÌƒtƒŒ[ƒ€
@@ -47,6 +48,20 @@ public:
 	virtual void Draw();
 	virtual void Exit();
 
+	enum tagEnemy
+	{
+		ENEMY1,
+		ENEMY2,
+		ENEMY3,
+		ENEMY4,
+		ENEMY5,
+		ENEMY6,
+		ENEMY7,
+		ENEMY8,
+		ENEMY9,
+		BOSS
+	};
+	tagEnemy m_enemy;
 	//“G‚ÌÀ•Wæ“¾
 	void GetPos(VECTOR& Pos)
 	{
@@ -85,6 +100,15 @@ public:
 	}
 
 
-	
+public:
+	void SetEnemyState(tagEnemy enemy)
+	{
+		m_enemy = enemy;
+	}
+
+	tagEnemy GetEnemyState()
+	{
+		return m_enemy;
+	}
 
 };

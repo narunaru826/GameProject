@@ -166,7 +166,7 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 	
 	switch (m_RequestPostionState)
 	{
-	case 0:
+	case CENTER:
 		m_Pos.x = ConvertX(x,50);
 		m_Pos.y = ConvertY(y, 50) - 300;
 		if (!m_isActive)
@@ -175,7 +175,7 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 		}
 		break;
 
-	case 1:
+	case RIGHT:
 		m_Pos.x = ConvertX(x,50) + 300;
 		m_Pos.y = ConvertY(y,50) - 300;
 		if (!m_isActive)
@@ -183,7 +183,7 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 			m_RequestPostionState = 2;
 		}
 		break;
-	case 2:
+	case LEFT:
 		m_Pos.x = ConvertX(x,50) - 300;
 		m_Pos.y = ConvertY(y,50) - 300;
 		if (!m_isActive)

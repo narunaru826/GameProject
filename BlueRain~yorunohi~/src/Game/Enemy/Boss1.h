@@ -36,7 +36,7 @@ public:
 	//I—¹
 	void Exit();
 	//–ˆƒtƒŒ[ƒ€ˆ—
-	void Step(ShotManager& shotmanager, Player& player);
+	void Step(ShotManager& shotmanager, Player& player,Enemy1 &enemy1);
 
 	//•`‰æ
 	void Draw();
