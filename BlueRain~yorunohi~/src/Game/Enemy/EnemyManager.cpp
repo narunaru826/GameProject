@@ -173,34 +173,45 @@ void EnemyManager::Step(Player &player ,ShotManager &shotManager)
 	case ENEMY2:
 		for (int i = 0; i < ENEMY_NUM; i++)
 		{
+			m_Boss1[i].SetEnemyState(Boss1::ENEMY2);
+			m_Boss1[i].Step(shotManager, player, m_Enemy[i]);
+			if (m_Boss1[i].IsActive())
+			{
+				enemyNum2++;
+			}
+		}
+		if (enemyNum2 == 0)
+		{
+			Boss1Request();
+		}
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
 
-			m_Enemy2[i].Step(shotManager, player);
+			m_Enemy[i].Step(shotManager, player);
 		}
 		break;
 	case ENEMY3:
 		for (int i = 0; i < ENEMY_NUM; i++)
 		{
+			m_Boss1[i].SetEnemyState(Boss1::ENEMY3);
+			m_Boss1[i].Step(shotManager, player, m_Enemy[i]);
+			if (m_Boss1[i].IsActive())
+			{
+				enemyNum2++;
+			}
+		}
+		if (enemyNum2 == 0)
+		{
+			Boss1Request();
+		}
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
 
-			m_Enemy3[i].Step(shotManager, player);
+			m_Enemy[i].Step(shotManager, player);
 		}
 		break;
 	case ENEMY4:
-		for (int i = 0; i < MOB_NUM; i++)
-		{
-
-			m_mob1[i].Step(shotManager, player);
-			if (m_mob1[i].IsActive())
-			{
-				enemyNum1++;
-			}
-			m_waitcount--;
-			if (m_waitcount <= 0 || enemyNum1 == 0)
-			{
-				m_count++;
-				Mob1Request();
-				m_waitcount = 40;
-			}
-		}
+		
 		break;
 	case ENEMY5:
 		
@@ -230,6 +241,11 @@ void EnemyManager::Step(Player &player ,ShotManager &shotManager)
 		if (enemyNum2 == 0)
 		{
 			Boss1Request();
+		}
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+
+			m_Enemy[i].Step(shotManager, player);
 		}
 		break;
 	}
@@ -277,14 +293,24 @@ void EnemyManager::Draw()
 		for (int i = 0; i < ENEMY_NUM; i++)
 		{
 
-			m_Enemy2[i].Draw();
+			m_Enemy[i].Draw();
+		}
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+			m_Boss1[i].Draw();
+
 		}
 		break;
 	case ENEMY3:
 		for (int i = 0; i < ENEMY_NUM; i++)
 		{
 
-			m_Enemy3[i].Draw();
+			m_Enemy[i].Draw();
+		}
+		for (int i = 0; i < ENEMY_NUM; i++)
+		{
+			m_Boss1[i].Draw();
+
 		}
 		break;
 	case ENEMY4:

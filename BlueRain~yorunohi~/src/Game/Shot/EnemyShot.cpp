@@ -45,7 +45,7 @@ void ShotEnemy::Exit()
 	//ƒ‚ƒfƒ‹ƒnƒ“ƒhƒ‹‰ð•ú
 	if (m_hndl != -1)
 	{
-		//MV1DeleteModel(m_hndl);
+		DeleteGraph(m_hndl);
 		m_hndl = -1;
 	}
 }
@@ -55,7 +55,7 @@ void ShotEnemy::Load(int hndl)
 {
 	if (m_hndl == -1)
 	{
-		//m_hndl = MV1DuplicateModel(hndl);
+		m_hndl = hndl;
 	}
 }
 
@@ -65,7 +65,7 @@ void ShotEnemy::Draw()
 	
 	if (m_isActive)
 	{
-		DrawCircle(m_Pos.x, m_Pos.y, 6, GetColor(234, 145, 152));
+		DrawRotaGraph(m_Pos.x, m_Pos.y, 0.04, 0.0f, m_hndl, TRUE);
 		//MV1DrawModel(m_hndl);
 #ifdef MY_DEBUG
 		VECTOR Pos = m_Pos;
@@ -96,7 +96,7 @@ void ShotEnemy::Step(Player& Player)
 	{
 		m_isActive = false;
 	}
-	if (m_Pos.x > 1030 || m_Pos.x < 0)
+	if (m_Pos.x > 900 || m_Pos.x < 0)
 	{
 		m_isActive = false;
 	}

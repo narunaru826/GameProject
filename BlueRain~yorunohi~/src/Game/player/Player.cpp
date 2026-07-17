@@ -104,9 +104,9 @@ void Player::Step(/*ShotManager& shotmanager*/)
 	{
 		m_Pos.x = 0;
 	}
-	if (m_Pos.x > 1030)
+	if (m_Pos.x > 900)
 	{
-		m_Pos.x = 1030;
+		m_Pos.x = 900;
 	}
 	if (m_Pos.y < 0)
 	{
@@ -129,6 +129,7 @@ void Player::Step(/*ShotManager& shotmanager*/)
 	
 	if (m_invicount > 0)
 	{
+		
 		m_invicount--;
 	}
 

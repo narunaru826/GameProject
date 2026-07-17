@@ -3,7 +3,7 @@
 #include"../../Lib/Common.h"
 #include"../../Lib/MyMath/MyMath.h"
 #include<cmath>
-
+#include "../Sound/SoundManager.h"
 //#define MY_DEBUG 
 
 static const int ROOT_ID[] = { 1,2,3,4,5 };
@@ -86,6 +86,9 @@ void Boss1::Init()
 	m_wait = 60;
 	m_bosskillwait = 60;
 	m_bosskillflg = false;
+
+	m_movecount = 300;
+	m_sttate = 0;
 }
 
 //ロード
@@ -161,11 +164,84 @@ void Boss1::Step(ShotManager& shotmanager, Player& player, Enemy1& enemy1)
 	//第一ウェーブ======================================
 	switch (m_enemy) {
 	case ENEMY1:
+		switch (m_sttate)
+		{
+		case 0:
+			m_movecount--;
+			if (m_movecount < 0)
+			{
+				m_Pos.x += 5;
+				if (m_Pos.x > 800)
+				{
+					m_Pos.x = 800;
+					m_sttate = 1;
+					m_movecount = 200;
+				}
+				
+				
+			}
+			
+			break;
+
+		case 1:
+			m_movecount--;
+			if (m_movecount < 0)
+			{
+				m_Pos.x -= 5;
+				if (m_Pos.x < 200)
+				{
+					m_Pos.x = 200;
+					m_movecount = 300;
+					m_sttate = 2;
+				}
+				
+			}
+			break;
+		case 2:
+			m_movecount--;
+			if (m_movecount < 0)
+			{
+				m_Pos.x += 5;
+				if (m_Pos.x > 500)
+				{
+					m_Pos.x = 500;
+					m_movecount = 300;
+					m_sttate = 0;
+				}
+
+			}
+			break;
+		}
 		
 		break;
 	case ENEMY2:
+		if (m_isActive) {
+
+			m_shotwait--;
+			if (m_shotwait < 0) {
+				SoundManager::Play(SoundManager::SOUNDID_SE_ASSAULT);
+				shotmanager.RequestBossShot(m_Pos, m_Speed);
+				//shotmanager.RequestBossShot2(m_Pos, m_Speed);
+				//shotmanager.RequestBossShot3(m_Pos, m_Speed);
+
+				m_shotwait = SHOTWAIT;
+			}
+
+		}
 		break;
-	case ENEMY3:
+	case ENEMY3: 
+		if (m_isActive) {
+
+			m_shotwait--;
+			if (m_shotwait < 0) {
+				shotmanager.RequestBossShot(m_Pos, m_Speed);
+				shotmanager.RequestBossShot2(m_Pos, m_Speed);
+				//shotmanager.RequestBossShot3(m_Pos, m_Speed);
+
+				m_shotwait = SHOTWAIT;
+			}
+
+		}
 		break;
 	case ENEMY4:
 		break;
@@ -176,37 +252,16 @@ void Boss1::Step(ShotManager& shotmanager, Player& player, Enemy1& enemy1)
 	case BOSS:
 		
 		if (m_isActive) {
-			if (m_EnemyLife > 2500) {//2501まではこの処理
-				m_shotwait--;
-				if (m_shotwait < 0) {
-					shotmanager.RequestBossShot(m_Pos, m_Speed);
-					m_shotwait = SHOTWAIT;
-				}
-			}
-			//第2ウェーブ
-			if (m_EnemyLife <= 2500 && m_EnemyLife > 1500)
-			{
-				m_wait--;
-				if (m_wait < 0) {
-					m_shotwait--;
-					if (m_shotwait < 0) {
-						shotmanager.RequestBossShot2(m_Pos, m_Speed);
+			
+			m_shotwait--;
+			if (m_shotwait < 0) {
+				shotmanager.RequestBossShot(m_Pos, m_Speed);
+				shotmanager.RequestBossShot2(m_Pos, m_Speed);
+				shotmanager.RequestBossShot3(m_Pos, m_Speed);
 
-						m_shotwait = SHOTWAIT;
-					}
-				}
+				m_shotwait = SHOTWAIT;
 			}
-			if (m_EnemyLife <= 1500)
-			{
-				m_shotwait--;
-				if (m_shotwait < 0) {
-					shotmanager.RequestBossShot(m_Pos, m_Speed);
-					shotmanager.RequestBossShot2(m_Pos, m_Speed);
-					shotmanager.RequestBossShot3(m_Pos, m_Speed);
-
-					m_shotwait = SHOTWAIT;
-				}
-			}
+			
 		}
 		break;
 	}
@@ -214,7 +269,7 @@ void Boss1::Step(ShotManager& shotmanager, Player& player, Enemy1& enemy1)
 	
 
 	//移動制限
-	if (m_Pos.x < -100 || m_Pos.x > 1030 ||
+	if (m_Pos.x < -100 || m_Pos.x > 900 ||
 		m_Pos.y < 0 || m_Pos.y > 900)
 	{
 		m_isActive = false;

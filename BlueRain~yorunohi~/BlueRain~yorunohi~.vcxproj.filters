@@ -76,8 +76,8 @@
     <Filter Include="ソース ファイル\Game\Scene\Stage1">
       <UniqueIdentifier>{bd056d22-86f0-4adc-ad64-0be23551895a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Game\Scene\Stage2">
-      <UniqueIdentifier>{b558623f-dcfd-46f9-bb39-d8303e9e9846}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Game\Sound">
+      <UniqueIdentifier>{706b529d-cfaf-415e-83dd-52b8d9889f70}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -162,8 +162,14 @@
     <ClInclude Include="src\Lib\Process\Process.h">
       <Filter>ソース ファイル\Lib\Process</Filter>
     </ClInclude>
-    <ClInclude Include="src\Game\Scene\Play\Stage2.h">
-      <Filter>ソース ファイル\Game\Scene\Stage2</Filter>
+    <ClInclude Include="src\Game\Shot\EnemyShot2.h">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Shot\BossShot2.h">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Sound\SoundManager.h">
+      <Filter>ソース ファイル\Game\Sound</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -248,8 +254,14 @@
     <ClCompile Include="src\Lib\Process\Process.cpp">
       <Filter>ソース ファイル\Lib\Process</Filter>
     </ClCompile>
-    <ClCompile Include="src\Game\Scene\Play\Stage2.cpp">
-      <Filter>ソース ファイル\Game\Scene\Stage2</Filter>
+    <ClCompile Include="src\Game\Shot\EnemyShot2.cpp">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Shot\BossShot2.cpp">
+      <Filter>ソース ファイル\Game\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Sound\SoundManager.cpp">
+      <Filter>ソース ファイル\Game\Sound</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

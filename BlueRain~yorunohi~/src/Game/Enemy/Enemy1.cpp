@@ -206,7 +206,7 @@ void Enemy1::Step(ShotManager &shotmanager, Player& player)
 	}
 	
 	//ˆÚ“®§ŒÀ
-	if (m_Pos.x < -100 || m_Pos.x > 1030 ||
+	if (m_Pos.x < -100 || m_Pos.x > 900 ||
 		m_Pos.y < 0 || m_Pos.y > 900)
 	{
 		m_isActive = false;

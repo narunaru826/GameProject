@@ -24,6 +24,10 @@ class Boss1 : public Object
 	int m_wait;
 	int m_bosskillwait;
 	bool m_bosskillflg;
+
+
+	int m_movecount;
+	int m_sttate;
 public:
 	//コンストラクタ・デストラクタ
 	Boss1();

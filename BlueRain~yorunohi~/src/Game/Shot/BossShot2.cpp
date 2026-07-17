@@ -1,0 +1,140 @@
+#include"BossShot2.h"
+#include<math.h>
+
+//定義
+
+#define RADIUS (2)
+//#define MY_DEBUG 
+
+//コンストラクタ
+BossShot2::BossShot2()
+{
+	//初期化
+	memset(&m_Pos, 0, sizeof(VECTOR));
+	memset(&m_Speed, 0, sizeof(VECTOR));
+	m_Rot = VGet(0.0f, 0.0f, 0.0f);
+	m_hndl = -1;
+	m_Radius = RADIUS;
+	m_isActive = false;
+}
+
+//デストラクタ
+BossShot2::~BossShot2()
+{
+	Exit();
+}
+
+//初期化
+void BossShot2::Init()
+{
+	memset(&m_Pos, 0, sizeof(VECTOR));
+	m_Speed = VGet(0.0f, 0.0f, 0.0f);
+	m_Rot = VGet(0.0f, 0.0f, 0.0f);
+	m_hndl = -1;
+	m_Radius = RADIUS;
+	m_isActive = false;
+	m_waitflg = false;
+	m_waitTimer = 700;
+	m_Angle = 0;
+
+}
+
+//終了
+void BossShot2::Exit()
+{
+	//モデルハンドル解放
+	if (m_hndl != -1)
+	{
+		DeleteGraph(m_hndl);
+		m_hndl = -1;
+	}
+}
+
+//データロード
+void BossShot2::Load(int hndl)
+{
+	if (m_hndl == -1)
+	{
+		m_hndl = hndl;
+	}
+}
+
+//描画
+void BossShot2::Draw()
+{
+
+	if (m_isActive)
+	{
+		DrawRotaGraph(m_Pos.x, m_Pos.y, 0.015, 0.0f, m_hndl, TRUE);
+		//MV1DrawModel(m_hndl);
+#ifdef MY_DEBUG
+		VECTOR Pos = m_Pos;
+
+		DrawSphere3D(Pos, m_Radius, 16, GetColor(0, 0, 255), GetColor(0, 0, 0), FALSE);
+#endif
+	}
+}
+
+//毎フレーム呼ぶ処理
+void BossShot2::Step()
+{
+	if (!m_isActive)
+	{
+		return;
+	}
+
+
+	//MATRIX	mat1, mat2;
+	//mat1 = MGetTranslate(m_Speed);
+	//mat2 = MGetRotY(m_Rot);
+	//mat1 = MMult(mat1, mat2);
+	//m_Speed = VGet(mat1.m[3][0], mat1.m[3][1], mat1.m[3][2]);
+
+
+	////座標に速度を加算
+	float speed = 5.0f;
+
+
+	m_Pos = VAdd(m_Pos, m_Speed);
+	//一定範囲を超えたら消す
+
+	if (m_Pos.y > 900 || m_Pos.y < 0)
+	{
+		m_isActive = false;
+	}
+	if (m_Pos.x > 900 || m_Pos.x < 0)
+	{
+		m_isActive = false;
+	}
+
+
+}
+
+//リクエスト
+bool BossShot2::RequestShot(const VECTOR& Pos, const VECTOR& Speed)
+{
+	//すでに発射されている
+	if (m_isActive)
+	{
+		return false;
+	}
+
+	m_Pos = Pos;
+	m_Speed = Speed;
+
+	m_isActive = true;
+
+
+
+	return true;
+}
+void BossShot2::Hit()
+{
+	m_isActive = false;
+}
+
+void BossShot2::Shot()
+{
+
+
+}

@@ -56,7 +56,8 @@ bool CollisionManager::CheckHitPlayerToEnemy1Shot(Player& player, ShotManager& s
 		if (player.GetInviCount() <= 0) {
 			if (Collision::CheckHitSphereToSphere(PlayerPos, PlayerRadi, EnemyShotPos, EnemyShotRadi))
 			{
-				if (!player.Hit())
+				
+				if (!player.Hit()) 
 				{
 					return true;
 				}

@@ -1,11 +1,7 @@
 #include"ShotManager.h"
 #include<math.h>
 
-//定義関連
-static const char PLSHOT_MODEL_PATH[] = { "data/model/Weapon/Bullet.x" };
 
-static const char TURRETSHOT_MODEL_PATH[] = { "data/model/Weapon/Bullet.x" };
-static const char ENESHOTGUID_MODEL_PATH[] = { "data/model/SphereChan/SphereChan.x" };
 #define SHOTWAIT (3)
 #define SHOTSPEED (30)
 
@@ -14,13 +10,17 @@ ShotManager::ShotManager()
 {
 	m_Rot = 0.0f;
 	m_hndl = -1;
+	m_hndl2 = -1;
+	m_hndl3 = -1;
+	m_hndl4 = -1;
+	m_hndl5 = -1;
 	
 }
 
 //デストラクタ
 ShotManager::~ShotManager()
 {
-
+	Exit();
 }
 //初期化
 void ShotManager::Init()
@@ -35,12 +35,26 @@ void ShotManager::Init()
 		m_EnemyShot[i].Init();
 
 	}
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		m_EnemyShot2[i].Init();
+
+	}
 	for (int i = 0; i < BOSS_SHOT_NUM; i++)
 	{
 		m_BossShot[i].Init();
 
 	}
+	for (int i = 0; i < BOSS_SHOT_NUM; i++)
+	{
+		m_BossShot2[i].Init();
+
+	}
 	m_hndl = -1;
+	m_hndl2 = -1;
+	m_hndl3 = -1;
+	m_hndl4 = -1;
+	m_hndl5 = -1;
 	
 	count = 700;
 	m_Rot = 0.0f;
@@ -48,28 +62,55 @@ void ShotManager::Init()
 	m_shotWait = 0;
 
 	m_count = 0;
+	m_count2 = 0;
 }
 
 //ロード
 void ShotManager::Load()
 {
-	//オリジナルモデル読み込み
-	/*if (m_hndl == -1) {
-		m_hndl = MV1LoadModel(PLSHOT_MODEL_PATH);
-	}
-	*/
-
-	//モデル複製
-	/*for (int i = 0; i < PL_SHOT_NUM; i++)
+	if (m_hndl == -1)
 	{
-		PlayerShot[i].Load(m_hndl);
-
-	}*/
-
+		m_hndl = LoadGraph("Data/shotboss4.png");
+	}
+	if (m_hndl2 == -1)
+	{
+		m_hndl2 = LoadGraph("Data/shotboss.png");
+	}
+	if (m_hndl3 == -1)
+	{
+		m_hndl3 = LoadGraph("Data/shotboss3.png");
+	}
+	if (m_hndl4 == -1)
+	{
+		m_hndl4 = LoadGraph("Data/BYKN0939.png");
+	}
+	if (m_hndl5 == -1)
+	{
+		m_hndl5 = LoadGraph("Data/shot1.png");
+	}
+	//オリジナルモデル読み込み
+	for (int i = 0; i < PL_SHOT_NUM; i++)
+	{
+		m_PlayerShot[i].Load(m_hndl5);
+	}
+	for (int i = 0; i < BOSS_SHOT_NUM; i++)
+	{
+		m_BossShot[i].Load(m_hndl);
+	}
+	for (int i = 0; i < BOSS_SHOT_NUM; i++)
+	{
+		m_BossShot2[i].Load(m_hndl2);
+	}
 	
-	
-	
-
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		m_EnemyShot[i].Load(m_hndl4);
+	}
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		m_EnemyShot2[i].Load(m_hndl4);
+	}
+	//DeleteGraph(m_hndl);
 }
 
 //終了
@@ -78,17 +119,51 @@ void ShotManager::Exit()
 	/*for (int i = 0; i < PL_SHOT_NUM; i++)
 	{
 
-		PlayerShot[i].Exit();
+		m_PlayerShot[i].Exit();
 
 	}*/
+	for (int i = 0; i < BOSS_SHOT_NUM; i++)
+	{
+		m_BossShot[i].Exit();
+	}
+	/*for (int i = 0; i < BOSS_SHOT_NUM; i++)
+	{
+		m_BossShot2[i].Exit();
+	}
 
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		m_EnemyShot[i].Exit();
+	}
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		m_EnemyShot2[i].Exit();
+	}*/
 	
 }
 
 //毎フレーム呼ぶ処理
 void ShotManager::Step(Player &player)
 {
-	
+	if (player.GetInviCount() > 0)
+	{
+		for (int i = 0; i < ENE_SHOT_NUM; i++)
+		{
+			m_EnemyShot[i].SetIsActive(false);
+		}
+		for (int i = 0; i < ENE_SHOT_NUM; i++)
+		{
+			m_EnemyShot2[i].SetIsActive(false);
+		}
+		for (int i = 0; i < BOSS_SHOT_NUM; i++)
+		{
+			m_BossShot[i].SetIsActive(false);
+		}
+		for (int i = 0; i < BOSS_SHOT_NUM; i++)
+		{
+			m_BossShot2[i].SetIsActive(false);
+		}
+	}
 	for (int i = 0; i < PL_SHOT_NUM; i++)
 	{
 
@@ -106,6 +181,7 @@ void ShotManager::Step(Player &player)
 		m_shotWait = SHOTWAIT;
 	}
 	bool allfalse = true;
+	bool allfalse2 = true;
 
 	
 	for (int i = 0; i < ENE_SHOT_NUM; i++)
@@ -120,10 +196,27 @@ void ShotManager::Step(Player &player)
 			m_EnemyShot[i].Step(player);
 		}
 	}
-		
 	if (allfalse)
 	{
 		m_count = 0;
+	}
+
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		if (m_EnemyShot2[i].IsActive())
+		{
+			allfalse2 = false;
+
+		}
+		if (m_count2 >= 138)
+		{
+			m_EnemyShot2[i].Step(player);
+		}
+	}
+	
+	if (allfalse2)
+	{
+		m_count2 = 0;
 	}
 	m_Rot += 0.01;
 	
@@ -132,6 +225,12 @@ void ShotManager::Step(Player &player)
 	{
 
 		m_BossShot[i].Step();
+
+	}
+	for (int i = 0; i < BOSS_SHOT_NUM; i++)
+	{
+
+		m_BossShot2[i].Step();
 
 	}
 }
@@ -145,18 +244,31 @@ void ShotManager::Draw()
 		m_PlayerShot[i].Draw();
 
 	}
-
+	
 	for (int i = 0; i < ENE_SHOT_NUM; i++)
 	{
-
-		m_EnemyShot[i].Draw();
+		if (m_EnemyShot[i].IsActive()) {
+			m_EnemyShot[i].Draw();
+		}
 
 	}
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+		if (m_EnemyShot2[i].IsActive()) {
+			m_EnemyShot2[i].Draw();
+		}
 
+	}
 	for (int i = 0; i < BOSS_SHOT_NUM; i++)
 	{
 
 		m_BossShot[i].Draw();
+
+	}
+	for (int i = 0; i < BOSS_SHOT_NUM; i++)
+	{
+
+		m_BossShot2[i].Draw();
 
 	}
 	DrawFormatString(20, 20, GetColor(255, 0, 0), "弾が発射された数:%d", m_count);
@@ -219,6 +331,44 @@ void ShotManager::RequestEnemyShot(const VECTOR& Pos, const VECTOR& Speed)
 	}
 	
 }
+//プレイヤーのショットリクエスト
+void ShotManager::RequestEnemyShot2(const VECTOR& Pos, const VECTOR& Speed)
+{
+
+	VECTOR CPos = Pos;
+	static int count = 700;
+	float angle = 0.0f;
+	int rand = GetRand(4);
+
+
+
+	VECTOR Spd;
+	VECTOR v;
+	float len = 0.0f;;
+	v = VSub(m_pl, Pos);
+
+	len = v.x * v.x + v.y * v.y + v.z * v.z;
+	len = sqrtf(len);
+
+	v.x = v.x / len;
+	v.y = v.y / len;
+	v.z = v.z / len;
+
+	Spd.x = v.x * 6;
+	Spd.y = v.y * 6;
+	Spd.z = v.z * 6;
+	for (int i = 0; i < ENE_SHOT_NUM; i++)
+	{
+
+
+		if (m_EnemyShot2[i].RequestShot(CPos, Spd))
+		{
+			m_count2++;
+			break;
+		}
+	}
+
+}
 
 //ボスのショットリクエスト1
 void ShotManager::RequestBossShot(const VECTOR& Pos, const VECTOR& Speed)
@@ -236,7 +386,7 @@ void ShotManager::RequestBossShot(const VECTOR& Pos, const VECTOR& Speed)
 	
 	Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 6;
 	Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 6;
-	rad += 60;
+	rad += 90;
 	radi += 50;
 	count++;
 	
@@ -278,8 +428,8 @@ void ShotManager::RequestBossShot2(const VECTOR& Pos, const VECTOR& Speed)
 	VECTOR Spd;
 
 
-	Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 8;
-	Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 8;
+	Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 5;
+	Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 5;
 	rad += 60;
 	radi += 50;
 	count++;
@@ -287,13 +437,13 @@ void ShotManager::RequestBossShot2(const VECTOR& Pos, const VECTOR& Speed)
 	for (int i = 0; i < BOSS_SHOT_NUM; i++)
 	{
 
-		Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 8;
-		Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 8;
+		Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 5;
+		Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 5;
 		rad += 60;
 		radi += 50;
 		count++;
 
-		if (m_BossShot[i].RequestShot(CPos, Spd))
+		if (m_BossShot2[i].RequestShot(CPos, Spd))
 		{
 			//m_count++;
 
@@ -326,8 +476,8 @@ void ShotManager::RequestBossShot3(const VECTOR& Pos, const VECTOR& Speed)
 	VECTOR Spd;
 
 
-	Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 8;
-	Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 8;
+	Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 7;
+	Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 7;
 	rad += 60;
 	radi += 50;
 	count++;
@@ -335,13 +485,13 @@ void ShotManager::RequestBossShot3(const VECTOR& Pos, const VECTOR& Speed)
 	for (int i = 0; i < BOSS_SHOT_NUM; i++)
 	{
 
-		Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 8;
-		Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 8;
+		Spd.x = cosf(rad * DX_PI_F / 180 + radi) * 6;
+		Spd.y = sinf(rad * DX_PI_F / 180 + radi) * 6;
 		rad += 60;
 		radi += 50;
 		count++;
 
-		if (m_BossShot[i].RequestShot(CPos, Spd))
+		if (m_BossShot2[i].RequestShot(CPos, Spd))
 		{
 			//m_count++;
 

@@ -4,7 +4,7 @@
 //#include "TitleFade.h"
 #include"../../../Lib/Fade/Fade.h"
 #include "../../../Lib/Input/Input.h"
-//#include "../../System/Sound/SoundManager.h"
+#include "../../Sound/SoundManager.h"
 
 
 
@@ -39,6 +39,7 @@ int TitleScene::Loop()
 	{
 	case TITLE_SCENE_INIT:
 		Init();
+		SoundManager::Play(SoundManager::SOUNDID_TITLE);
 		m_SceneID = TITLE_SCENE_LOAD;
 		break;
 	case TITLE_SCENE_LOAD:

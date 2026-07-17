@@ -13,14 +13,16 @@ C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\player\Player.cpp;C:\Users\
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Scene\Choice\ChoiceScene.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\ChoiceScene.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Scene\GameOver\GameOver.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\GameOver.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Scene\Play\Play.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\Play.obj
-C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Scene\Play\Stage2.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\Stage2.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Scene\Result\Result.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\Result.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Scene\SceneManager\SceneManager.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\SceneManager.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Scene\Title\Title.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\Title.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\BossShot.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\BossShot.obj
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\BossShot2.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\BossShot2.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\EnemyShot.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\EnemyShot.obj
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\EnemyShot2.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\EnemyShot2.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\PLShot.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\PLShot.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Shot\ShotManager.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\ShotManager.obj
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Sound\SoundManager.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\SoundManager.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Lib\collision\col.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\col.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Lib\Fade\Fade.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\Fade.obj
 C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Lib\Input\Input.cpp;C:\Users\2409402\Desktop\BlueRain~yorunohi~\BlueRain.3601a8f1\x64\Debug\Input.obj

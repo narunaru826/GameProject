@@ -1,2 +1,7 @@
-﻿  EnemyManager.cpp
+﻿  Boss1.cpp
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Boss1.cpp(123,28): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Boss1.cpp(123,19): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Boss1.cpp(124,31): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Boss1.cpp(124,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\2409402\Desktop\BlueRain~yorunohi~\src\Game\Enemy\Boss1.cpp(162,6): warning C4101: 'mm': ローカル変数は 1 度も使われていません。
   BlueRain~yorunohi~.vcxproj -> C:\Users\2409402\Desktop\BlueRain~yorunohi~\x64\Debug\BlueRain~yorunohi~.exe

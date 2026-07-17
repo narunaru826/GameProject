@@ -40,7 +40,7 @@ void ShotPL::Exit()
 	//ƒ‚ƒfƒ‹ƒnƒ“ƒhƒ‹‰ð•ú
 	if (m_hndl != -1)
 	{
-		//MV1DeleteModel(m_hndl);
+		DeleteGraph(m_hndl);
 		m_hndl = -1;
 	}
 }
@@ -50,7 +50,7 @@ void ShotPL::Load(int hndl)
 {
 	if (m_hndl == -1)
 	{
-		//m_hndl = MV1DuplicateModel(hndl);
+		m_hndl = hndl;
 	}
 }
 
@@ -60,7 +60,7 @@ void ShotPL::Draw()
 
 	if (m_isActive)
 	{
-		DrawCircle(m_Pos.x, m_Pos.y, 6, GetColor(255, 0, 0));
+		DrawRotaGraph(m_Pos.x, m_Pos.y, 0.03, 0.0f, m_hndl, TRUE);
 		//MV1DrawModel(m_hndl);
 #ifdef MY_DEBUG
 		VECTOR Pos = m_Pos;

@@ -13,11 +13,21 @@ class Enemy2 : public Object
 
 	bool m_waitflg;
 	int m_waitTimer;
+
+	int m_RequestCount;
+
+	int m_RequestPostionState;
 public:
 	//コンストラクタ・デストラクタ
 	Enemy2();
 	~Enemy2();
-
+	enum TagEnemy2Move
+	{
+		CENTER,
+		RIGHT,
+		LEFT
+	};
+	TagEnemy2Move enemy1move;
 	//初期化
 	void Init();
 	//ロード

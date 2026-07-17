@@ -66,5 +66,8 @@ public:
 	}
 	void Shot();
 
-
+	void SetIsActive(bool flg)
+	{
+		m_isActive = flg;
+	}
 };

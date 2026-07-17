@@ -47,6 +47,10 @@ public:
 	{
 		return m_isActive;
 	}
+	void SetIsActive(bool flg)
+	{
+		m_isActive = flg;
+	}
 	//À•Wæ“¾
 	void GetPosition(VECTOR& Pos)
 	{

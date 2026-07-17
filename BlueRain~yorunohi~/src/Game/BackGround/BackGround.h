@@ -4,6 +4,8 @@ class BackGround
 {
 private:
 	int m_hndl;
+	int m_hndl2;
+	VECTOR m_Pos;
 
 public:
 	BackGround();

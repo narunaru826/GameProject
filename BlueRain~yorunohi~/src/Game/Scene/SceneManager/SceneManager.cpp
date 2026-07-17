@@ -1,5 +1,5 @@
 #include "SceneManager.h"
-//#include "SoundManager.h"
+#include "../../Sound/SoundManager.h"
 #include "../../../lib/Common.h"
 #include"../../../Lib//Fade/Fade.h"
 //定義関連-----------------------
@@ -11,14 +11,15 @@ SceneManager::SceneManager()
 {
 	m_SceneID = SCENE_TITLE;
 
-	//SoundManager::Init();
-	//SoundManager::LoadAllData();
+	SoundManager::Init();
+	
+	SoundManager::LoadAllData();
 }
 
 //デストラクタ
 SceneManager::~SceneManager()
 {
-	//SoundManager::Exit();
+	SoundManager::Exit();
 }
 void SceneManager::Init()
 {
@@ -67,13 +68,13 @@ int SceneManager::Loop()
 		break;
 	
 	case SCENE_RESULT:
-		//SoundManager::Stop(SoundManager::SOUNDID_BGM);
+		SoundManager::Stop(SoundManager::SOUNDID_BGM);
 		if (ResultScene.Loop() != 0) {
 			m_SceneID = SCENE_TITLE;
 		}
 		break;
 	case SCENE_GAMEOVER:
-		//SoundManager::Stop(SoundManager::SOUNDID_BGM);
+		SoundManager::Stop(SoundManager::SOUNDID_BGM);
 		if (GameoverScene.Loop() != 0) {
 			m_SceneID = SCENE_TITLE;
 		}

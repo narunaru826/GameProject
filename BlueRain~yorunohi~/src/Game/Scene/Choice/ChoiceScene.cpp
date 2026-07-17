@@ -4,7 +4,7 @@
 //#include "TitleFade.h"
 #include"../../../Lib/Fade/Fade.h"
 #include "../../../Lib/Input/Input.h"
-//#include "../../System/Sound/SoundManager.h"
+#include "../../Sound/SoundManager.h"
 
 
 
@@ -67,7 +67,7 @@ int ChoiceScene::Loop()
 	case CHOICE_SCENE_END:
 		Exit();
 		
-
+		//SoundManager::StopAll();
 
 			m_SceneID = CHOICE_SCENE_INIT;
 			Ret = 1;
@@ -86,7 +86,7 @@ void ChoiceScene::Draw()
 	case CHOICE_SCENE_LOOP:
 	case CHOICE_SCENE_END:
 	case CHOICE_SCENE_ENDWAIT:
-		//DrawRotaGraph(1600 / 2, 900 / 2, 1.0f, 0.0f, m_hndl, TRUE);
+		DrawRotaGraph(1600 / 2, 900 / 2, 1.0f, 0.0f, m_hndl, TRUE);
 		DrawFormatString(40, 30, GetColor(255, 0, 0), "選択");
 		break;
 	}
@@ -114,10 +114,10 @@ void ChoiceScene::Exit()
 //ロード
 void ChoiceScene::Load()
 {
-	/*if (m_hndl == -1)
+	if (m_hndl == -1)
 	{
-		m_hndl = LoadGraph("data/title/title.png");
-	}*/
+		m_hndl = LoadGraph("Data/Choise.jpg");
+	}
 }
 
 //毎フレーム呼ぶ処理

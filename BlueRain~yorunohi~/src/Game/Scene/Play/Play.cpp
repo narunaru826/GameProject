@@ -2,6 +2,7 @@
 #include"../../../Lib/Input/Input.h"
 #include"../../CollisionManager/Collision.h"
 #include"../../../Lib/Fade/Fade.h"
+#include "../../Sound/SoundManager.h"
 //定義関連---------------------------
 #define D2R(deg) ((deg)*DX_PI_F/180.0f)
 //-----------------------------------
@@ -36,7 +37,7 @@ int Play::Loop(ChoiceScene choice)
 	{
 	case PLAY_SCENE_INIT:
 
-		
+		SoundManager::Play(SoundManager::SOUNDID_BGM);
 		Init();
 
 		m_SceneID = PLAY_SCENE_LOAD;
@@ -54,27 +55,27 @@ int Play::Loop(ChoiceScene choice)
 				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY1);
 			}
 			if (choice.GetStagenum() == 2) {
-				Step2();
+				Step();
 				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY2);
 			}
 			if (choice.GetStagenum() == 3) {
-				Step3();
+				Step();
 				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY3);
 			}
 			if (choice.GetStagenum() == 4) {
-				Step4();
-				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY4);
+				Step();
+				m_EnemyManager.SetEnemyState(EnemyManager::BOSS);
 			}
 			if (choice.GetStagenum() == 5) {
-				Step5();
+				Step();
 				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY5);
 			}
 			if (choice.GetStagenum() == 6) {
-				Step6();
+				Step();
 				m_EnemyManager.SetEnemyState(EnemyManager::ENEMY6);
 			}
 			if (choice.GetStagenum() == 7) {
-				Step7();
+				Step();
 				m_EnemyManager.SetEnemyState(EnemyManager::BOSS);
 			}
 			
@@ -156,6 +157,7 @@ void Play::Exit()
 {
 	m_BackGround.Exit();
 	m_Player.Exit();
+	m_ShotManager.Exit();
 	m_EnemyManager.Exit();
 	m_life.Exit();
 }
@@ -165,6 +167,7 @@ void Play::Load()
 {
 	m_BackGround.Load();
 	m_Player.Load();
+	m_ShotManager.Load();
 	m_EnemyManager.Load();
 	m_life.Load();
 }
@@ -191,86 +194,3 @@ void Play::Step()
 	m_life.Step();
 }
 
-//毎フレーム呼ぶ処理
-void Play::Step2()
-{
-	m_BackGround.Step();
-	m_Player.Step(/*m_ShotManager*/);
-	m_ShotManager.Step(m_Player);
-
-	/*m_Enemy1.Step(m_ShotManager, m_Player);
-	m_Enemy2.Step(m_ShotManager, m_Player);
-	m_Enemy3.Step(m_ShotManager,m_Player);*/
-	m_EnemyManager.Step(m_Player, m_ShotManager);
-	m_life.Step();
-}
-
-//毎フレーム呼ぶ処理
-void Play::Step3()
-{
-	m_BackGround.Step();
-	m_Player.Step(/*m_ShotManager*/);
-	m_ShotManager.Step(m_Player);
-
-	/*m_Enemy1.Step(m_ShotManager, m_Player);
-	m_Enemy2.Step(m_ShotManager, m_Player);
-	m_Enemy3.Step(m_ShotManager,m_Player);*/
-	m_EnemyManager.Step(m_Player, m_ShotManager);
-	m_life.Step();
-}
-
-//毎フレーム呼ぶ処理
-void Play::Step4()
-{
-	m_BackGround.Step();
-	m_Player.Step(/*m_ShotManager*/);
-	m_ShotManager.Step(m_Player);
-
-	/*m_Enemy1.Step(m_ShotManager, m_Player);
-	m_Enemy2.Step(m_ShotManager, m_Player);
-	m_Enemy3.Step(m_ShotManager,m_Player);*/
-	m_EnemyManager.Step(m_Player, m_ShotManager);
-	m_life.Step();
-}
-
-//毎フレーム呼ぶ処理
-void Play::Step5()
-{
-	m_BackGround.Step();
-	m_Player.Step(/*m_ShotManager*/);
-	m_ShotManager.Step(m_Player);
-
-	/*m_Enemy1.Step(m_ShotManager, m_Player);
-	m_Enemy2.Step(m_ShotManager, m_Player);
-	m_Enemy3.Step(m_ShotManager,m_Player);*/
-	m_EnemyManager.Step(m_Player, m_ShotManager);
-	m_life.Step();
-}
-
-//毎フレーム呼ぶ処理
-void Play::Step6()
-{
-	m_BackGround.Step();
-	m_Player.Step(/*m_ShotManager*/);
-	m_ShotManager.Step(m_Player);
-
-	/*m_Enemy1.Step(m_ShotManager, m_Player);
-	m_Enemy2.Step(m_ShotManager, m_Player);
-	m_Enemy3.Step(m_ShotManager,m_Player);*/
-	m_EnemyManager.Step(m_Player, m_ShotManager);
-	m_life.Step();
-}
-
-//毎フレーム呼ぶ処理
-void Play::Step7()
-{
-	m_BackGround.Step();
-	m_Player.Step(/*m_ShotManager*/);
-	m_ShotManager.Step(m_Player);
-
-	/*m_Enemy1.Step(m_ShotManager, m_Player);
-	m_Enemy2.Step(m_ShotManager, m_Player);
-	m_Enemy3.Step(m_ShotManager,m_Player);*/
-	m_EnemyManager.Step(m_Player, m_ShotManager);
-	m_life.Step();
-}
